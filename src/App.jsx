@@ -570,7 +570,7 @@ function App() {
 
           <Reveal className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
             <div className="bg-red-100 text-red-500 px-6 py-3 text-center font-bold text-lg">
-              🔥 Limited Slots: Only 5 businesses accepted this month
+              � Limited Slots: Only 5 businesses accepted this month
             </div>
             
             <div className="p-8">

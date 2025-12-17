@@ -264,14 +264,14 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Restaurant / Food</h3>
                 <p className="text-gray-600 mb-6">
-                  More Orders, Less Chaos = Online table reservations, pickup/delivery order forms, and automated "Leave a Review" texts after dining.
+                  More Orders, Less Chaos = Online table reservations, digital menu, and easy pickup/delivery order forms.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Table Reservations
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Digital Menu
                   </li>
                   <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Review Automation
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Table Reservations
                   </li>
                 </ul>
               </div>
@@ -292,14 +292,14 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">E-commerce Shop</h3>
                 <p className="text-gray-600 mb-6">
-                  Sell While You Sleep = Beautiful product pages, automated abandoned cart recovery SMS, and order status updates.
+                  Sell While You Sleep = Beautiful product pages, easy checkout forms, and GCash payment integration.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Abandoned Cart SMS
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Mobile-Ready Store
                   </li>
                   <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Order Tracking
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> GCash Integration
                   </li>
                 </ul>
               </div>

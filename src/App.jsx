@@ -71,7 +71,7 @@ function App() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0 flex items-center">
-              <span className="font-bold text-2xl text-blue-600">QuickSite PH</span>
+              <Logo className="h-8" />
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Services</a>

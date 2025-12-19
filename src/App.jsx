@@ -383,23 +383,23 @@ function App() {
 
           <Reveal className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
 
-            {/* BEFORE â€“ Manual Chaos */}
+            {/* BEFORE — Manual Chaos */}
             <div className="bg-gray-800 rounded-2xl p-8 border border-red-900">
-              <h3 className="text-2xl font-bold text-red-500 mb-6">BEFORE â€“ Manual Chaos</h3>
+              <h3 className="text-2xl font-bold text-red-500 mb-6">BEFORE — Manual Chaos</h3>
               <p className="text-2xl font-bold text-red-400 mb-6">
-                Lost â‚±150,000+ in missed bookings last year
+                Lost ₱150,000+ in missed bookings last year
               </p>
               <ul className="text-left space-y-4 text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-red-500 text-2xl">Ã—</span>
-                  Answering â€œHow much?â€ on FB Messenger 50Ã— a day
+                  <span className="text-red-500 text-2xl">×</span>
+                  Answering “How much?” on FB Messenger 50× a day
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-red-500 text-2xl">Ã—</span>
+                  <span className="text-red-500 text-2xl">×</span>
                   Double bookings and confused schedules
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-red-500 text-2xl">Ã—</span>
+                  <span className="text-red-500 text-2xl">×</span>
                   Chasing payments and sending bank details manually
                 </li>
               </ul>
@@ -412,22 +412,22 @@ function App() {
                   RECOMMENDED
                 </div>
                 <h3 className="text-2xl font-bold text-green-500 mb-6">
-                  AFTER â€“ QuickSite Automation
+                  AFTER — QuickSite Automation
                 </h3>
                 <p className="text-2xl font-bold text-green-400 mb-6">
-                  Now earning an extra <span className="text-4xl">â‚±80Kâ€“â‚±200K/month</span> on autopilot
+                  Now earning an extra <span className="text-4xl">₱80K–₱200K/month</span> on autopilot
                 </p>
                 <ul className="text-left space-y-4 text-lg mb-8">
                   <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-2xl">âœ“</span>
+                    <span className="text-green-500 text-2xl">✓</span>
                     Instant automated quotes and booking confirmation
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-2xl">âœ“</span>
+                    <span className="text-green-500 text-2xl">✓</span>
                     Synced calendar prevents double bookings
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-2xl">âœ“</span>
+                    <span className="text-green-500 text-2xl">✓</span>
                     Automated GCash payments and receipts
                   </li>
                 </ul>
@@ -444,7 +444,7 @@ function App() {
                   className="rounded-xl shadow-2xl w-full"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg animate-pulse">
-                  479K views Â· 40.6% conversion
+                  479K views · 40.6% conversion
                 </div>
               </div>
             </div>

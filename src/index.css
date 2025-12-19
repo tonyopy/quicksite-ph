@@ -7,6 +7,11 @@ html {
 }
 
 @layer utilities {
+  .bg-grid-pattern {
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
   .reveal-hidden {
     opacity: 0;
     transform: translateY(30px);

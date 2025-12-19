@@ -65,19 +65,19 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
+    <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-blue-100 selection:text-blue-900">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm fixed w-full z-50">
+      <nav className="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
+          <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0 flex items-center">
-              <Logo className="h-8" />
+              <Logo className="h-9 w-auto" />
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
-              <a href="#examples" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Examples</a>
-              <a href="#pricing" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
-              <a href="#contact" className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 font-medium">Get Started</a>
+            <div className="hidden md:flex space-x-8 items-center">
+              <a href="#services" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Services</a>
+              <a href="#examples" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Examples</a>
+              <a href="#pricing" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Pricing</a>
+              <a href="#contact" className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 font-bold shadow-lg shadow-blue-600/20 transition-all hover:scale-105">Get Started</a>
             </div>
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-gray-600 hover:text-blue-600 focus:outline-none">
@@ -90,63 +90,86 @@ function App() {
         </div>
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white">
+          <div className="md:hidden bg-white border-t border-gray-100">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a href="#services" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
               <a href="#examples" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Examples</a>
               <a href="#pricing" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
-              <a href="#contact" className="block bg-orange-500 text-white px-3 py-2 rounded-md hover:bg-orange-600 font-medium text-center">Get Started</a>
+              <a href="#contact" className="block bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 font-medium text-center">Get Started</a>
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-blue-50/50 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-50 animate-pulse pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-orange-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
-              Get <span className="text-blue-600">20+ Inquiries</span> Per Month<br className="hidden md:block" /> or Your Money Back
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 font-medium text-sm mb-8 animate-fade-in-up">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Accepting New Clients for 2025
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+              Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">20+ Inquiries</span><br className="hidden md:block" /> Per Month
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600 mb-8">
-              We build high-converting, automated booking websites specifically for Philippine businesses. Stop chasing leads and start closing deals.
+            <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-600 mb-10 leading-relaxed">
+              We build high-converting, automated booking websites specifically for Philippine businesses. <span className="text-gray-900 font-semibold">Stop chasing leads and start closing deals.</span>
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="#pricing" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg">
+              <a href="#pricing" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/20 transition-all hover:scale-105 hover:-translate-y-1">
                 View Plans
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="#examples" className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 md:text-lg">
+              <a href="#examples" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm transition-all hover:scale-105 hover:-translate-y-1">
                 See Examples
               </a>
             </div>
-            <div className="mt-8 flex justify-center space-x-6 text-sm text-gray-500 mb-12">
-              <div className="flex items-center">
+            <div className="mt-12 flex flex-wrap justify-center gap-y-4 gap-x-8 text-sm font-medium text-gray-500 mb-16">
+              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
                 <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                 <span>Money-back Guarantee</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+                <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />
                 <span>GCash Integrated</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+                <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />
                 <span>Mobile Optimized</span>
               </div>
             </div>
           </Reveal>
           
-          <Reveal className="relative mt-12 max-w-4xl mx-auto">
-            <div className="rounded-xl shadow-2xl overflow-hidden border-4 border-white">
+          <Reveal className="relative mt-12 max-w-5xl mx-auto">
+            <div className="rounded-2xl shadow-2xl overflow-hidden border-4 border-white/50 bg-gray-900 aspect-video group relative">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80" 
                 alt="Business Analytics Dashboard" 
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
               />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl hidden md:block">
-              <div className="flex items-center space-x-2">
-                <div className="h-3 w-3 bg-green-500 rounded-full"></div>
-                <span className="font-bold text-gray-800">20+ New Inquiries</span>
+              {/* Floating UI Elements */}
+              <div className="absolute bottom-8 left-8 right-8 z-20 flex justify-between items-end">
+                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/20 hidden md:block animate-bounce-slow">
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-green-100 p-2 rounded-lg">
+                      <div className="h-3 w-3 bg-green-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Status</p>
+                      <p className="font-bold text-gray-900">20+ New Inquiries Today</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -154,157 +177,179 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-white">
+      <section id="services" className="py-24 bg-white relative">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <Reveal className="text-center mb-20">
+            <h2 className="text-4xl font-heading font-extrabold text-gray-900 sm:text-5xl mb-6">
               Specialized Solutions
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              We don't just build generic websites. We build automated systems for your specific industry.
+            <p className="max-w-2xl mx-auto text-xl text-gray-500 leading-relaxed">
+              We don't just build generic websites. We build <span className="text-blue-600 font-semibold">automated systems</span> for your specific industry.
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {/* Service 1: Condo */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src={condoImg}
                   alt="Modern Condo Interior" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                  <a href="#examples" className="bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-bold px-3 py-1 rounded-full hover:bg-blue-600 hover:text-white transition-colors">
+                    View Demo
+                  </a>
+                </div>
               </div>
               <div className="p-8">
-                <div className="bg-blue-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <Layout className="h-8 w-8 text-blue-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Layout className="h-7 w-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Condo Rentals</h3>
-                <p className="text-gray-600 mb-6">
-                  Fully Booked 24/7 â‚±7,000/mo = automated calendar, GCash/Maya payments, real-time availability, guest screening forms + we post your listings monthly                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Real-time Availability
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Condo Rentals</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">Fully Booked 24/7.</span> Online booking requests, GCash/Maya payments, digital guest screening.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" /> Online Booking System
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Guest Screening Forms
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" /> Guest Screening Forms
                   </li>
                 </ul>
               </div>
             </Reveal>
 
             {/* Service 2: Printing */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-indigo-100 hover:shadow-2xl hover:shadow-indigo-900/5 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src={printingImg}
                   alt="Professional Printing Service" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="p-8">
-                <div className="bg-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <Printer className="h-8 w-8 text-indigo-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Printer className="h-7 w-7 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Printing Shops</h3>
-                <p className="text-gray-600 mb-6">
-                  Accept Orders & Payments Online â‚±7,000/mo = customers upload files, get instant quotes, pay GCash/Maya, track orders â€” no more messy FB Messenger
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">Printing Shops</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">Accept Orders Online.</span> Customers upload files, get instant quotes, and pay via GCash/Maya automatically.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> File Upload System
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-indigo-500 mr-3 flex-shrink-0" /> File Upload System
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Price Calculator
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-indigo-500 mr-3 flex-shrink-0" /> Price Calculator
                   </li>
                 </ul>
               </div>
             </Reveal>
 
             {/* Service 3: Dental */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-teal-100 hover:shadow-2xl hover:shadow-teal-900/5 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src={dentalImg}
                   alt="Modern Dental Clinic" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                  <a href="#examples" className="bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-bold px-3 py-1 rounded-full hover:bg-blue-600 hover:text-white transition-colors">
+                    View Demo
+                  </a>
+                </div>
               </div>
               <div className="p-8">
-                <div className="bg-teal-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <Stethoscope className="h-8 w-8 text-teal-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Stethoscope className="h-7 w-7 text-teal-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Dental Clinics</h3>
-                <p className="text-gray-600 mb-6">
-                  Zero Phone Tag  â‚±7,000/mo = patients book online, get SMS reminders, fill digital forms, pay GCash â€” you just treat
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">Dental Clinics</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">Zero Phone Tag.</span> Patients book online, get SMS reminders, fill digital forms, and pay deposit.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> SMS Reminders
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-teal-500 mr-3 flex-shrink-0" /> SMS Reminders
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Patient History Form
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-teal-500 mr-3 flex-shrink-0" /> Patient History Form
                   </li>
                 </ul>
               </div>
             </Reveal>
 
             {/* Service 4: Restaurant */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-orange-100 hover:shadow-2xl hover:shadow-orange-900/5 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src={restaurantImg}
                   alt="Restaurant Interior" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                  <a href="#examples" className="bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-bold px-3 py-1 rounded-full hover:bg-blue-600 hover:text-white transition-colors">
+                    View Demo
+                  </a>
+                </div>
               </div>
               <div className="p-8">
-                <div className="bg-orange-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <Utensils className="h-8 w-8 text-orange-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Utensils className="h-7 w-7 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Restaurant / Food</h3>
-                <p className="text-gray-600 mb-6">
-                  More Orders, Less Chaos = Online table reservations, digital menu, and easy pickup/delivery order forms.
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Restaurant / Food</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">More Orders, Less Chaos.</span> Online table reservations, digital menu, and easy pickup/delivery.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Digital Menu
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-orange-500 mr-3 flex-shrink-0" /> Digital Menu
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Table Reservations
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-orange-500 mr-3 flex-shrink-0" /> Table Reservations
                   </li>
                 </ul>
               </div>
             </Reveal>
 
             {/* Service 5: E-commerce */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-pink-100 hover:shadow-2xl hover:shadow-pink-900/5 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src={ecommerceImg}
                   alt="E-commerce" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="p-8">
-                <div className="bg-pink-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <ShoppingBag className="h-8 w-8 text-pink-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <ShoppingBag className="h-7 w-7 text-pink-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">E-commerce Shop</h3>
-                <p className="text-gray-600 mb-6">
-                  Sell While You Sleep = Beautiful product pages, easy checkout forms, and GCash payment integration.
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">E-commerce Shop</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">Sell While You Sleep.</span> Beautiful product pages, easy checkout forms, and GCash payment integration.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Mobile-Ready Store
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 flex-shrink-0" /> Mobile-Ready Store
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> GCash Integration
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 flex-shrink-0" /> GCash Integration
                   </li>
                 </ul>
                 <button 
                   onClick={() => alert("Template gallery coming soon! Contact us for a demo.")}
-                  className="w-full mt-2 bg-pink-50 text-pink-600 px-4 py-2 rounded-lg font-semibold hover:bg-pink-100 transition-colors flex items-center justify-center gap-2"
+                  className="w-full mt-2 bg-pink-50 text-pink-700 px-4 py-3 rounded-xl font-bold hover:bg-pink-100 transition-colors flex items-center justify-center gap-2 group-hover:bg-pink-600 group-hover:text-white"
                 >
                   <Layout size={18} /> View Templates
                 </button>
@@ -312,56 +357,63 @@ function App() {
             </Reveal>
 
             {/* Service 6: Lawyer */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-slate-100 hover:shadow-2xl hover:shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src={lawyersImg}
                   alt="Law Office" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="p-8">
-                <div className="bg-slate-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <Scale className="h-8 w-8 text-slate-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Scale className="h-7 w-7 text-slate-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Lawyers & Pros</h3>
-                <p className="text-gray-600 mb-6">
-                  Paid Consultations Only = Clients book and pay for slots online. Auto-send intake forms before the meeting.
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-slate-600 transition-colors">Lawyers & Pros</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">Paid Consultations Only.</span> Clients book and pay for slots online. Auto-send intake forms.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Paid Appointments
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-slate-500 mr-3 flex-shrink-0" /> Paid Appointments
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Client Intake Forms
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-slate-500 mr-3 flex-shrink-0" /> Client Intake Forms
                   </li>
                 </ul>
               </div>
             </Reveal>
 
             {/* Service 7: Website Creation */}
-            <Reveal className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
+            <Reveal className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-purple-100 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-300 hover:-translate-y-1 md:col-span-3 lg:col-span-1">
+              <div className="h-56 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80" 
                   alt="Website Creation" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                  <a href="#examples" className="bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-bold px-3 py-1 rounded-full hover:bg-blue-600 hover:text-white transition-colors">
+                    View Demo
+                  </a>
+                </div>
               </div>
               <div className="p-8">
-                <div className="bg-purple-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                  <Laptop className="h-8 w-8 text-purple-600" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Laptop className="h-7 w-7 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Custom Website Creation</h3>
-                <p className="text-gray-600 mb-6">
-                  Build Your Brand = Fully customized, mobile-responsive websites tailored to your unique business needs.
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">Custom Website</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  <span className="font-semibold text-gray-900">Build Your Brand.</span> Fully customized, mobile-responsive websites tailored to your unique business needs.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Custom Design
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-purple-500 mr-3 flex-shrink-0" /> Custom Design
                   </li>
-                  <li className="flex items-center text-gray-600 text-sm">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> SEO Optimized
+                  <li className="flex items-center text-gray-600 text-sm font-medium">
+                    <CheckCircle className="h-5 w-5 text-purple-500 mr-3 flex-shrink-0" /> SEO Optimized
                   </li>
                 </ul>
               </div>
@@ -493,7 +545,7 @@ function App() {
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-white">3. You Get Paid</h4>
                 <p className="text-gray-400 text-sm">
-                  Payment verified via GCash. Reminder sent 24h before appointment.
+                  Payment verified via GCash. Email confirmation sent.
                 </p>
               </div>
             </div>
@@ -502,61 +554,74 @@ function App() {
       </section>
 
       {/* Process / How It Works */}
-      <section className="py-16 bg-blue-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+      <section className="py-24 bg-blue-50/50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-40 mix-blend-multiply"></div>
+          <div className="absolute bottom-20 right-0 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-40 mix-blend-multiply"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <Reveal className="text-center mb-20">
+            <h2 className="text-4xl font-heading font-extrabold text-gray-900 sm:text-5xl mb-6">
               How It Works
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              We handle the heavy lifting. You just handle the bookings.
+            <p className="max-w-2xl mx-auto text-xl text-gray-500 leading-relaxed">
+              We handle the heavy lifting. <span className="text-blue-600 font-semibold">You just handle the bookings.</span>
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
-            {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-blue-200 -z-10 transform -translate-y-1/2"></div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
+            {/* Desktop Arrows */}
+            <div className="hidden md:block absolute top-12 left-[28%] w-[14%] h-px border-t-2 border-dashed border-blue-200 z-0"></div>
+            <div className="hidden md:block absolute top-12 right-[28%] w-[14%] h-px border-t-2 border-dashed border-blue-200 z-0"></div>
 
             {/* Step 1 */}
-            <Reveal className="bg-white p-8 rounded-xl shadow-md text-center relative">
-              <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 border-4 border-white shadow-lg">
-                1
+            <Reveal className="group relative">
+              <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-300 h-full flex flex-col items-center text-center z-10 relative">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-500/20 mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 relative">
+                  <ClipboardCheck className="w-9 h-9" />
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white border-2 border-blue-100 flex items-center justify-center text-blue-600 font-bold shadow-sm">
+                    1
+                  </div>
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Sign Up</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Choose your plan and fill out our simple onboarding form with your business details.
+                </p>
               </div>
-              <div className="flex justify-center mb-4">
-                <ClipboardCheck className="h-10 w-10 text-blue-500" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Sign Up</h3>
-              <p className="text-gray-600">
-                Choose your plan and fill out our simple onboarding form with your business details.
-              </p>
             </Reveal>
 
             {/* Step 2 */}
-            <Reveal className="bg-white p-8 rounded-xl shadow-md text-center relative">
-              <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 border-4 border-white shadow-lg">
-                2
+            <Reveal className="group relative" >
+              <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 hover:border-indigo-200 hover:shadow-2xl hover:shadow-indigo-900/5 transition-all duration-300 h-full flex flex-col items-center text-center z-10 relative">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-500/20 mb-8 transform group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 relative">
+                  <Laptop className="w-9 h-9" />
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white border-2 border-indigo-100 flex items-center justify-center text-indigo-600 font-bold shadow-sm">
+                    2
+                  </div>
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">We Build & Setup</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We build your website, set up the domain, and configure your automation (3-5 days).
+                </p>
               </div>
-              <div className="flex justify-center mb-4">
-                <Laptop className="h-10 w-10 text-blue-500" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">We Build & Setup</h3>
-              <p className="text-gray-600">
-                We build your website, set up the domain, and configure your automation (3-5 days).
-              </p>
             </Reveal>
 
             {/* Step 3 */}
-            <Reveal className="bg-white p-8 rounded-xl shadow-md text-center relative">
-              <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 border-4 border-white shadow-lg">
-                3
+            <Reveal className="group relative">
+              <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-100 hover:border-purple-200 hover:shadow-2xl hover:shadow-purple-900/5 transition-all duration-300 h-full flex flex-col items-center text-center z-10 relative">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 text-white flex items-center justify-center shadow-lg shadow-purple-500/20 mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 relative">
+                  <Rocket className="w-9 h-9" />
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white border-2 border-purple-100 flex items-center justify-center text-purple-600 font-bold shadow-sm">
+                    3
+                  </div>
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">Launch & Train</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We hand over the keys, walk you through your new system, and you start getting bookings.
+                </p>
               </div>
-              <div className="flex justify-center mb-4">
-                <Rocket className="h-10 w-10 text-blue-500" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Launch & Train</h3>
-              <p className="text-gray-600">
-                We hand over the keys, show you how to use the dashboard, and you start getting bookings.
-              </p>
             </Reveal>
           </div>
         </div>
@@ -636,7 +701,7 @@ function App() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">Automated Calendar Sync</span>
+                      <span className="text-gray-700 text-sm">Online Booking Setup</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
@@ -644,7 +709,7 @@ function App() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">SMS Reminders for Clients</span>
+                      <span className="text-gray-700 text-sm">Email Booking Notifications</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />

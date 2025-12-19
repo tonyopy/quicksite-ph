@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Logo = ({ className = "" }) => (
   <div className={`flex items-center gap-3 select-none ${className}`}>
-    <img src="/icon.jpg" alt="QuickSite PH" className="h-14 w-auto object-contain" />
+    <img src="/Icon-header.jpg" alt="QuickSite PH" className="h-14 w-auto object-contain" />
     <div className="flex flex-col justify-center">
       <span className="font-extrabold text-2xl tracking-tight leading-none text-gray-900 pb-1">
         Quick<span className="text-blue-600">Site</span>

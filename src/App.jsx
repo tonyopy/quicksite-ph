@@ -181,7 +181,7 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Condo Rentals</h3>
                 <p className="text-gray-600 mb-6">
-                  Fully Booked 24/7 ₱7,000/mo = automated calendar, GCash/Maya payments, real-time availability, guest screening forms + we post your listings monthly                </p>
+                  Fully Booked 24/7 â‚±7,000/mo = automated calendar, GCash/Maya payments, real-time availability, guest screening forms + we post your listings monthly                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 text-sm">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> Real-time Availability
@@ -208,7 +208,7 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Printing Shops</h3>
                 <p className="text-gray-600 mb-6">
-                  Accept Orders & Payments Online ₱7,000/mo = customers upload files, get instant quotes, pay GCash/Maya, track orders — no more messy FB Messenger
+                  Accept Orders & Payments Online â‚±7,000/mo = customers upload files, get instant quotes, pay GCash/Maya, track orders â€” no more messy FB Messenger
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 text-sm">
@@ -236,7 +236,7 @@ function App() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Dental Clinics</h3>
                 <p className="text-gray-600 mb-6">
-                  Zero Phone Tag  ₱7,000/mo = patients book online, get SMS reminders, fill digital forms, pay GCash — you just treat
+                  Zero Phone Tag  â‚±7,000/mo = patients book online, get SMS reminders, fill digital forms, pay GCash â€” you just treat
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 text-sm">
@@ -302,6 +302,12 @@ function App() {
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" /> GCash Integration
                   </li>
                 </ul>
+                <button 
+                  onClick={() => alert("Template gallery coming soon! Contact us for a demo.")}
+                  className="w-full mt-2 bg-pink-50 text-pink-600 px-4 py-2 rounded-lg font-semibold hover:bg-pink-100 transition-colors flex items-center justify-center gap-2"
+                >
+                  <Layout size={18} /> View Templates
+                </button>
               </div>
             </Reveal>
 
@@ -377,23 +383,23 @@ function App() {
 
           <Reveal className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
 
-            {/* BEFORE – Manual Chaos */}
+            {/* BEFORE â€“ Manual Chaos */}
             <div className="bg-gray-800 rounded-2xl p-8 border border-red-900">
-              <h3 className="text-2xl font-bold text-red-500 mb-6">BEFORE – Manual Chaos</h3>
+              <h3 className="text-2xl font-bold text-red-500 mb-6">BEFORE â€“ Manual Chaos</h3>
               <p className="text-2xl font-bold text-red-400 mb-6">
-                Lost ₱150,000+ in missed bookings last year
+                Lost â‚±150,000+ in missed bookings last year
               </p>
               <ul className="text-left space-y-4 text-lg">
                 <li className="flex items-center gap-3">
-                  <span className="text-red-500 text-2xl">×</span>
-                  Answering “How much?” on FB Messenger 50× a day
+                  <span className="text-red-500 text-2xl">Ã—</span>
+                  Answering â€œHow much?â€ on FB Messenger 50Ã— a day
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-red-500 text-2xl">×</span>
+                  <span className="text-red-500 text-2xl">Ã—</span>
                   Double bookings and confused schedules
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-red-500 text-2xl">×</span>
+                  <span className="text-red-500 text-2xl">Ã—</span>
                   Chasing payments and sending bank details manually
                 </li>
               </ul>
@@ -406,22 +412,22 @@ function App() {
                   RECOMMENDED
                 </div>
                 <h3 className="text-2xl font-bold text-green-500 mb-6">
-                  AFTER – QuickSite Automation
+                  AFTER â€“ QuickSite Automation
                 </h3>
                 <p className="text-2xl font-bold text-green-400 mb-6">
-                  Now earning an extra <span className="text-4xl">₱80K–₱200K/month</span> on autopilot
+                  Now earning an extra <span className="text-4xl">â‚±80Kâ€“â‚±200K/month</span> on autopilot
                 </p>
                 <ul className="text-left space-y-4 text-lg mb-8">
                   <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-2xl">✓</span>
+                    <span className="text-green-500 text-2xl">âœ“</span>
                     Instant automated quotes and booking confirmation
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-2xl">✓</span>
+                    <span className="text-green-500 text-2xl">âœ“</span>
                     Synced calendar prevents double bookings
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-2xl">✓</span>
+                    <span className="text-green-500 text-2xl">âœ“</span>
                     Automated GCash payments and receipts
                   </li>
                 </ul>
@@ -438,7 +444,7 @@ function App() {
                   className="rounded-xl shadow-2xl w-full"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg animate-pulse">
-                  479K views · 40.6% conversion
+                  479K views Â· 40.6% conversion
                 </div>
               </div>
             </div>
@@ -568,60 +574,129 @@ function App() {
             </p>
           </Reveal>
 
-          <Reveal className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-            <div className="bg-red-100 text-red-500 px-6 py-3 text-center font-bold text-lg">
-              � Limited Slots: Only 5 businesses accepted this month
-            </div>
-            
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">All-in-One Website + Automation Plan</h3>
-              
-              <div className="mb-8 text-lg text-gray-700">
-                <span className="font-bold">₱7,000/mo</span> (billed annually at ₱84,000) → <span className="font-bold text-green-600">Save ₱36,000/year</span>
+          <Reveal className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* TIER 1: Starter */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+                <div className="p-8 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Starter Automation</h3>
+                  <p className="text-sm text-gray-500 mb-6">Perfect for side hustles & freelancers.</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-extrabold text-gray-900">₱3,500</span>
+                    <span className="text-gray-500 font-medium">/mo</span>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">One-Page Website</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Basic Booking Form</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Email Notifications</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Standard Hosting</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="p-8 bg-gray-50 mt-auto">
+                  <a href="#contact" className="block w-full bg-white border-2 border-blue-600 text-blue-600 font-bold py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+                    Get Started
+                  </a>
+                </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">Custom Professional Website (Mobile-Responsive)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">Automated Booking & Calendar System</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">GCash + Maya + Bank Transfer Payments</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">Free Domain + Ultra-Fast Hosting (1 year)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">4 Content Updates Every Month (we post for you)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">Priority 24/7 WhatsApp/Viber Support</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">FREE Setup (worth ₱25,000)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">30-Day Money-Back Guarantee</span>
-                </li>
-              </ul>
-            <p className="text-red-600 font-bold text-xl md:text-xl my-8">
-              Price increases to ₱9,900/mo in January <br />
-              <span className="text-green-600">→ Current clients locked at ₱7,000 forever</span>
-            </p>
-              <div className="mt-8">
-                <a href="#contact" className="block w-full bg-blue-600 text-white text-center font-bold py-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center text-lg">
-                  Claim My FREE Setup Before Price Increase <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+              {/* TIER 2: Growth (Highlighted) */}
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-600 flex flex-col relative transform md:-translate-y-4">
+                <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                  Most Popular
+                </div>
+                <div className="p-8 flex-1">
+                  <h3 className="text-xl font-bold text-blue-600 mb-2">Growth Automation</h3>
+                  <p className="text-sm text-gray-500 mb-6">For businesses ready to scale.</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-extrabold text-gray-900">₱7,000</span>
+                    <span className="text-gray-500 font-medium">/mo</span>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm font-semibold">Everything in Starter, plus:</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Multi-Page Professional Site</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Automated Calendar Sync</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">GCash/Maya Payment Integration</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">SMS Reminders for Clients</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">4 Monthly Content Updates</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="p-8 bg-blue-50 mt-auto">
+                  <a href="#contact" className="block w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition-colors text-center shadow-lg">
+                    Choose Growth
+                  </a>
+                </div>
+              </div>
+
+              {/* TIER 3: Scale */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+                <div className="p-8 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Scale & Dominate</h3>
+                  <p className="text-sm text-gray-500 mb-6">Full-service digital partnership.</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-extrabold text-gray-900">₱15,000</span>
+                    <span className="text-gray-500 font-medium">/mo</span>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm font-semibold">Everything in Growth, plus:</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Priority 24/7 Support</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Advanced SEO & Analytics</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Unlimited Content Updates</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Dedicated Account Manager</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="p-8 bg-gray-50 mt-auto">
+                  <a href="#contact" className="block w-full bg-white border-2 border-gray-300 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-center">
+                    Contact Sales
+                  </a>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -648,7 +723,7 @@ function App() {
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                       <CheckCircle className="h-10 w-10 text-green-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Received! 🚀</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Received! ðŸš€</h3>
                     <p className="text-gray-600 mb-8 max-w-md mx-auto">
                       Thank you for reaching out. We have received your details and will contact you shortly via WhatsApp or Viber to discuss your project.
                     </p>

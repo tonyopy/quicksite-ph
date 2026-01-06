@@ -788,7 +788,7 @@ function App() {
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                       <CheckCircle className="h-10 w-10 text-green-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Received! ðŸš€</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Received! 🚀</h3>
                     <p className="text-gray-600 mb-8 max-w-md mx-auto">
                       Thank you for reaching out. We have received your details and will contact you shortly via WhatsApp or Viber to discuss your project.
                     </p>

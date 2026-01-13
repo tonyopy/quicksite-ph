@@ -8,6 +8,11 @@ function TermsOfService({ onBack }) {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-16">
+      <Helmet>
+        <title>Terms of Service - QuickSite PH</title>
+        <meta name="description" content="Terms of Service for QuickSite PH. Read our terms and conditions for using our website and services." />
+        <link rel="canonical" href="https://quicksiteph.com/" />
+      </Helmet>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <button 
           onClick={onBack}

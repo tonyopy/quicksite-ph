@@ -51,7 +51,7 @@ function RealEstateDesign6() {
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3" /> 98% Occupancy Rate
                 </li>
                 <li className="flex items-center text-gray-700 font-bold">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3" /> < 1% Eviction Rate
+                  <CheckCircle className="w-6 h-6 text-green-500 mr-3" /> &lt; 1% Eviction Rate
                 </li>
                 <li className="flex items-center text-gray-700 font-bold">
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3" /> 24/7 Maintenance Response

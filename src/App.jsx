@@ -4,6 +4,7 @@ import { CheckCircle, ArrowRight, Layout, Printer, Stethoscope, Star, Phone, Mai
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 import About from './About';
+import TemplatesGallery from './TemplatesGallery';
 import { Logo, LogoWhite } from './Logo';
 
 // Import Images
@@ -51,6 +52,82 @@ function Reveal({ children, className = "" }) {
   );
 }
 
+function AutomationDemo() {
+  const [step, setStep] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStep((prev) => (prev === 3 ? 1 : prev + 1));
+    }, 1200);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="w-full max-w-4xl mx-auto mb-16 p-8 bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-blue-500/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+      {/* Notification Toast */}
+      <div className={`absolute top-6 right-6 flex items-center gap-3 bg-slate-800 border border-slate-700 p-3 rounded-xl shadow-xl transition-all duration-500 transform z-20 ${step >= 1 ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'}`}>
+        <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shrink-0">
+          <MessageCircle className="w-5 h-5 text-white" />
+        </div>
+        <div>
+          <div className="text-xs text-blue-400 font-bold uppercase tracking-wider">New Lead</div>
+          <div className="text-sm font-bold text-white">John D. just booked!</div>
+        </div>
+      </div>
+
+      {/* Steps Container */}
+      <div className="flex flex-col md:flex-row items-center justify-between relative z-10 mt-16 md:mt-12 gap-12 md:gap-8 px-4 md:px-12">
+        
+        {/* Step 1: Lead Capture */}
+        <div className="relative group text-center">
+          <div className={`w-24 h-24 mx-auto rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${step >= 1 ? 'bg-blue-600 shadow-[0_0_40px_rgba(37,99,235,0.6)] scale-110' : 'bg-slate-800 border border-slate-700'}`}>
+            <ClipboardCheck className={`w-12 h-12 ${step >= 1 ? 'text-white' : 'text-slate-500'}`} />
+            {step >= 1 && <div className="absolute -top-3 -right-3 w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-sm font-bold text-blue-900 animate-bounce">1</div>}
+          </div>
+          <h3 className={`font-bold text-xl mb-2 transition-colors ${step >= 1 ? 'text-white' : 'text-slate-500'}`}>Lead Captures</h3>
+          <p className="text-sm text-slate-400">Client fills form</p>
+        </div>
+
+        {/* Arrow 1 */}
+        <div className="flex-1 h-1.5 bg-slate-800 mx-6 rounded-full overflow-hidden relative w-full md:w-auto min-w-[60px]">
+          <div className={`absolute top-0 left-0 h-full bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-[length:200%_100%] transition-all duration-1000 ease-out ${step >= 2 ? 'w-full animate-shimmer' : 'w-0'}`}></div>
+          <div className={`absolute left-0 top-1/2 -mt-1.5 w-3 h-3 rounded-full bg-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.9)] ${step >= 2 ? 'animate-flow opacity-100' : 'opacity-0'}`}></div>
+        </div>
+
+        {/* Step 2: Auto-Response */}
+        <div className="relative group text-center">
+          <div className={`w-24 h-24 mx-auto rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${step >= 2 ? 'bg-green-600 shadow-[0_0_40px_rgba(22,163,74,0.6)] scale-110' : 'bg-slate-800 border border-slate-700'}`}>
+            <Mail className={`w-12 h-12 ${step >= 2 ? 'text-white' : 'text-slate-500'}`} />
+             {step >= 2 && <div className="absolute -top-3 -right-3 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center text-sm font-bold text-green-900 animate-bounce">2</div>}
+          </div>
+          <h3 className={`font-bold text-xl mb-2 transition-colors ${step >= 2 ? 'text-white' : 'text-slate-500'}`}>Auto-Response</h3>
+          <p className="text-sm text-slate-400">Instant email sent</p>
+        </div>
+
+        {/* Arrow 2 */}
+        <div className="flex-1 h-1.5 bg-slate-800 mx-6 rounded-full overflow-hidden relative w-full md:w-auto min-w-[60px]">
+          <div className={`absolute top-0 left-0 h-full bg-gradient-to-r from-green-400 via-emerald-300 to-green-400 bg-[length:200%_100%] transition-all duration-1000 ease-out ${step >= 3 ? 'w-full animate-shimmer' : 'w-0'}`}></div>
+          <div className={`absolute left-0 top-1/2 -mt-1.5 w-3 h-3 rounded-full bg-emerald-300 shadow-[0_0_15px_rgba(110,231,183,0.9)] ${step >= 3 ? 'animate-flow opacity-100' : 'opacity-0'}`}></div>
+        </div>
+
+        {/* Step 3: Database Update */}
+        <div className="relative group text-center">
+          <div className={`w-24 h-24 mx-auto rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${step >= 3 ? 'bg-purple-600 shadow-[0_0_40px_rgba(147,51,234,0.6)] scale-110' : 'bg-slate-800 border border-slate-700'}`}>
+            <Layout className={`w-12 h-12 ${step >= 3 ? 'text-white' : 'text-slate-500'}`} />
+             {step >= 3 && <div className="absolute -top-3 -right-3 w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center text-sm font-bold text-purple-900 animate-bounce">3</div>}
+          </div>
+          <h3 className={`font-bold text-xl mb-2 transition-colors ${step >= 3 ? 'text-white' : 'text-slate-500'}`}>Database Update</h3>
+          <p className="text-sm text-slate-400">Saved to Sheets/CRM</p>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
@@ -66,20 +143,46 @@ function App() {
   });
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#templates')) {
+        setCurrentPage('templates');
+      } else if (hash === '#privacy') {
+        setCurrentPage('privacy');
+      } else if (hash === '#terms') {
+        setCurrentPage('terms');
+      } else if (hash === '#about') {
+        setCurrentPage('about');
+      } else if (hash === '' || hash === '#' || hash === '#home') {
+        setCurrentPage('home');
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleFaq = (index) => setOpenFaqIndex(openFaqIndex === index ? null : index);
 
   if (currentPage === 'privacy') {
-    return <PrivacyPolicy onBack={() => setCurrentPage('home')} />;
+    return <PrivacyPolicy onBack={() => window.location.hash = ''} />;
   }
 
   if (currentPage === 'terms') {
-    return <TermsOfService onBack={() => setCurrentPage('home')} />;
+    return <TermsOfService onBack={() => window.location.hash = ''} />;
   }
 
   if (currentPage === 'about') {
-    return <About onBack={() => setCurrentPage('home')} />;
+    return <About onBack={() => window.location.hash = ''} />;
   }
+
+  if (currentPage === 'templates') {
+    return <TemplatesGallery onBack={() => window.location.hash = ''} />;
+  }
+
 
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans selection:bg-blue-100 selection:text-blue-900">
@@ -98,7 +201,7 @@ function App() {
             </div>
             <div className="hidden md:flex space-x-8 items-center">
               <a href="#services" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Services</a>
-              <a href="#examples" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Examples</a>
+              <a href="#templates" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Templates</a>
               <a href="#pricing" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Pricing</a>
               
               {/* Currency Toggle Removed */}
@@ -121,7 +224,7 @@ function App() {
           <div className="md:hidden bg-white border-t border-gray-100">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a href="#services" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
-              <a href="#examples" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Examples</a>
+              <a href="#templates" className="block w-full text-left text-gray-600 hover:text-blue-600 px-3 py-2 font-medium" onClick={toggleMenu}>Templates</a>
               <a href="#pricing" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
               <a href="#contact" className="block bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 font-medium text-center">Get Started</a>
             </div>
@@ -151,7 +254,7 @@ function App() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Work 24/7 for Your Business</span>
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-600 mb-10 leading-relaxed">
-              Get a professional website + smart automation that captures leads, books appointments, and handles tasks while you sleep. <span className="text-gray-900 font-semibold">Starting at ₱20,000 / $357.</span>
+              Get a professional website + smart automation that captures leads, books appointments, and handles tasks while you sleep. <span className="text-gray-900 font-semibold">Starting at ₱5,999 / $107.</span>
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/20 transition-all hover:scale-105 hover:-translate-y-1">
@@ -180,86 +283,7 @@ function App() {
           
           <Reveal className="relative mt-12 max-w-5xl mx-auto">
              {/* Automation Workflow Visual */}
-             <div className="rounded-2xl shadow-2xl overflow-hidden border-4 border-white/50 bg-slate-900 aspect-video md:aspect-[21/9] group relative flex items-center justify-center p-8">
-                <div className="absolute inset-0 bg-grid-white/[0.05] pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-0"></div>
-                
-                {/* Workflow Container */}
-                <div className="relative z-10 w-full max-w-4xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
-                   
-                   {/* Step 1: Form */}
-                   <div className="flex flex-col items-center group/step1">
-                      <div className="w-20 h-20 bg-white/10 rounded-2xl border border-white/20 flex items-center justify-center backdrop-blur-sm mb-4 group-hover/step1:border-blue-500 group-hover/step1:bg-blue-500/20 transition-all duration-500 relative">
-                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-xs font-bold text-white">1</div>
-                         <ClipboardCheck className="w-10 h-10 text-blue-400 group-hover/step1:text-white transition-colors" />
-                      </div>
-                      <div className="text-center">
-                         <div className="font-bold text-white mb-1">Lead Captures</div>
-                         <div className="text-xs text-slate-400">Client fills form</div>
-                      </div>
-                   </div>
-
-                   {/* Arrow 1 */}
-                   <div className="hidden md:flex flex-1 items-center justify-center relative">
-                      <div className="h-1 w-full bg-slate-700 rounded-full overflow-hidden">
-                         <div className="h-full w-1/2 bg-blue-500 animate-loading-bar"></div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-slate-500 absolute right-0 -mt-2.5" />
-                   </div>
-                   <ArrowRight className="w-6 h-6 text-slate-600 md:hidden rotate-90" />
-
-                   {/* Step 2: Auto-Email */}
-                   <div className="flex flex-col items-center group/step2">
-                      <div className="w-20 h-20 bg-white/10 rounded-2xl border border-white/20 flex items-center justify-center backdrop-blur-sm mb-4 group-hover/step2:border-green-500 group-hover/step2:bg-green-500/20 transition-all duration-500 delay-150 relative">
-                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold text-white">2</div>
-                         <Mail className="w-10 h-10 text-green-400 group-hover/step2:text-white transition-colors" />
-                      </div>
-                      <div className="text-center">
-                         <div className="font-bold text-white mb-1">Auto-Response</div>
-                         <div className="text-xs text-slate-400">Instant email sent</div>
-                      </div>
-                   </div>
-
-                   {/* Arrow 2 */}
-                   <div className="hidden md:flex flex-1 items-center justify-center relative">
-                      <div className="h-1 w-full bg-slate-700 rounded-full overflow-hidden">
-                         <div className="h-full w-1/2 bg-green-500 animate-loading-bar delay-300"></div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-slate-500 absolute right-0 -mt-2.5" />
-                   </div>
-                   <ArrowRight className="w-6 h-6 text-slate-600 md:hidden rotate-90" />
-
-                   {/* Step 3: Database */}
-                   <div className="flex flex-col items-center group/step3">
-                      <div className="w-20 h-20 bg-white/10 rounded-2xl border border-white/20 flex items-center justify-center backdrop-blur-sm mb-4 group-hover/step3:border-purple-500 group-hover/step3:bg-purple-500/20 transition-all duration-500 delay-300 relative">
-                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold text-white">3</div>
-                         <div className="relative">
-                            <div className="absolute inset-0 bg-purple-500 blur-lg opacity-20 animate-pulse"></div>
-                            <Layout className="w-10 h-10 text-purple-400 group-hover/step3:text-white transition-colors relative z-10" />
-                         </div>
-                      </div>
-                      <div className="text-center">
-                         <div className="font-bold text-white mb-1">Database Update</div>
-                         <div className="text-xs text-slate-400">Saved to Sheets/CRM</div>
-                      </div>
-                   </div>
-
-                </div>
-
-                {/* Floating Notification */}
-                <div className="absolute top-8 right-8 animate-bounce-slow hidden md:block">
-                   <div className="bg-slate-800 border border-slate-700 rounded-lg p-3 shadow-xl flex items-center gap-3 max-w-[200px]">
-                      <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                         <MessageCircle className="w-4 h-4 text-blue-400" />
-                      </div>
-                      <div>
-                         <div className="text-[10px] text-slate-400 font-bold uppercase">New Lead</div>
-                         <div className="text-xs text-white font-medium">John D. just booked!</div>
-                      </div>
-                   </div>
-                </div>
-
-             </div>
+             <AutomationDemo />
           </Reveal>
         </div>
       </section>
@@ -790,8 +814,20 @@ function App() {
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
+              {
+                quote: "Dati ang dami kong nami-miss na inquiries kasi busy ako sa clinic. Ngayon, automatic na lahat. Yung basic package lang kinuha ko pero smooth na ang appointment system!",
+                author: "Dr. Elena R.",
+                role: "Dental Clinic Owner, Quezon City",
+                rating: 5
+              },
+              {
+                quote: "Sobrang laking tulong ng automation. Kahit tulog ako, may pumapasok na orders. Sulit na sulit yung investment ko dito.",
+                author: "Mark J.",
+                role: "Clothing Brand Owner, Manila",
+                rating: 5
+              },
               {
                 quote: "I used to spend 2 hours every night replying to inquiries on Messenger. Now, the website handles it. I've doubled my bookings without doing extra work.",
                 author: "Sarah M.",
@@ -808,6 +844,12 @@ function App() {
                 quote: "QuickSite PH didn't just build a website; they built a sales machine. The investment paid for itself in the first month.",
                 author: "Miguel D.",
                 role: "E-commerce Founder, Davao",
+                rating: 5
+              },
+              {
+                quote: "Akala ko mahirap gamitin, pero sobrang user-friendly! Yung basic website ko, professional tignan at ang bilis mag-load. Highly recommended!",
+                author: "Jessica L.",
+                role: "Freelance Consultant, Makati",
                 rating: 5
               }
             ].map((item, i) => (
@@ -844,7 +886,7 @@ function App() {
               Popular Automation Workflows We Build
             </h2>
           </Reveal>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               { title: "Lead Capture System", flow: "Form submission → CRM → Auto-email → Sales notification" },
@@ -984,30 +1026,52 @@ function App() {
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
               Transparent pricing. No hidden fees. Cancel anytime.
             </p>
+
+            {/* Currency Toggle */}
+            <div className="flex justify-center mt-8">
+              <div className="bg-gray-100 p-1 rounded-full inline-flex relative">
+                <button
+                  onClick={() => setCurrency('PHP')}
+                  className={`px-6 py-2 rounded-full text-sm font-bold transition-all relative z-10 ${currency === 'PHP' ? 'text-white' : 'text-gray-500 hover:text-gray-900'}`}
+                >
+                  PHP (₱)
+                </button>
+                <button
+                  onClick={() => setCurrency('USD')}
+                  className={`px-6 py-2 rounded-full text-sm font-bold transition-all relative z-10 ${currency === 'USD' ? 'text-white' : 'text-gray-500 hover:text-gray-900'}`}
+                >
+                  USD ($)
+                </button>
+                <div 
+                  className={`absolute top-1 bottom-1 w-[50%] bg-blue-600 rounded-full transition-all duration-300 ease-in-out ${currency === 'PHP' ? 'left-1' : 'left-[49%]'}`}
+                ></div>
+              </div>
+            </div>
           </Reveal>
 
           <Reveal className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* TIER 1: Starter */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
-                <div className="p-8 flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Starter Package</h3>
-                  <p className="text-sm text-gray-500 mb-6">Essential online presence.</p>
+            {/* ROW 1: 3 Packages (Basic, Standard, Starter) */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {/* TIER 0: Basic */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col hover:scale-105 transition-transform duration-300">
+                <div className="p-6 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Basic Package</h3>
+                  <p className="text-sm text-gray-500 mb-6">Professional Website Entry.</p>
                   
                   {currency === 'PHP' ? (
-                    <div className="mb-6">
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
                       <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
-                      <span className="text-3xl font-extrabold text-gray-900">₱20,000</span>
-                      <div className="mt-2">
+                      <span className="text-3xl font-extrabold text-gray-900">₱5,999</span>
+                      <div className="mt-2 pt-2 border-t border-gray-200">
                         <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
                         <span className="text-xl font-bold text-gray-600">₱1,000</span><span className="text-gray-500 text-sm">/mo</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="mb-6">
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
                       <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
-                      <span className="text-3xl font-extrabold text-gray-900">$357</span>
-                      <div className="mt-2">
+                      <span className="text-3xl font-extrabold text-gray-900">$107</span>
+                      <div className="mt-2 pt-2 border-t border-gray-200">
                         <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
                         <span className="text-xl font-bold text-gray-600">$18</span><span className="text-gray-500 text-sm">/mo</span>
                       </div>
@@ -1016,11 +1080,107 @@ function App() {
                   
                   <ul className="space-y-4 mb-8">
                     {[
-                      "5-page professional website",
+                      "Basic 1 Page Business Website",
+                      "FREE 1 Year Domain Name",
+                      "FREE 1 Year Hosting with SSL",
+                      "Simple email automation (Gmail/Booking)",
+                      "Mobile responsive design"
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-6 bg-gray-50 mt-auto">
+                  <a href="#contact" className="block w-full bg-white border-2 border-gray-300 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-center">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+
+              {/* TIER 0.5: Standard */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col hover:scale-105 transition-transform duration-300">
+                <div className="p-6 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Standard Package</h3>
+                  <p className="text-sm text-gray-500 mb-6">More pages for your content.</p>
+                  
+                  {currency === 'PHP' ? (
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
+                      <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
+                      <span className="text-3xl font-extrabold text-gray-900">₱7,999</span>
+                      <div className="mt-2 pt-2 border-t border-gray-200">
+                        <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
+                        <span className="text-xl font-bold text-gray-600">₱1,000</span><span className="text-gray-500 text-sm">/mo</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
+                      <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
+                      <span className="text-3xl font-extrabold text-gray-900">$142</span>
+                      <div className="mt-2 pt-2 border-t border-gray-200">
+                        <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
+                        <span className="text-xl font-bold text-gray-600">$18</span><span className="text-gray-500 text-sm">/mo</span>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <ul className="space-y-4 mb-8">
+                    {[
+                      "2-3 Website Pages",
+                      "FREE 1 Year Domain Name",
+                      "FREE 1 Year Hosting with SSL",
+                      "Simple email automation (Gmail/Booking)",
+                      "Mobile responsive design"
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-6 bg-gray-50 mt-auto">
+                  <a href="#contact" className="block w-full bg-white border-2 border-gray-300 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-center">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+
+              {/* TIER 1: Starter */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col hover:scale-105 transition-transform duration-300">
+                <div className="p-6 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Starter Package</h3>
+                  <p className="text-sm text-gray-500 mb-6">Essential online presence.</p>
+                  
+                  {currency === 'PHP' ? (
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
+                      <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
+                      <span className="text-3xl font-extrabold text-gray-900">₱14,999</span>
+                      <div className="mt-2 pt-2 border-t border-gray-200">
+                        <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
+                        <span className="text-xl font-bold text-gray-600">₱1,000</span><span className="text-gray-500 text-sm">/mo</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
+                      <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
+                      <span className="text-3xl font-extrabold text-gray-900">$267</span>
+                      <div className="mt-2 pt-2 border-t border-gray-200">
+                        <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
+                        <span className="text-xl font-bold text-gray-600">$18</span><span className="text-gray-500 text-sm">/mo</span>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <ul className="space-y-4 mb-8">
+                    {[
+                      "4-5 Website Pages",
                       "Automated contact form with email notifications",
                       "Mobile responsive design",
-                      "Free domain for 1 year",
-                      "SSL certificate",
+                      "FREE 1 Year Domain Name",
+                      "FREE 1 Year Hosting with SSL",
                       "Basic SEO setup"
                     ].map((feature, i) => (
                       <li key={i} className="flex items-start">
@@ -1030,36 +1190,39 @@ function App() {
                     ))}
                   </ul>
                 </div>
-                <div className="p-8 bg-gray-50 mt-auto">
+                <div className="p-6 bg-gray-50 mt-auto">
                   <a href="#contact" className="block w-full bg-white border-2 border-blue-600 text-blue-600 font-bold py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
                     Get Started
                   </a>
                 </div>
               </div>
+            </div>
 
+            {/* ROW 2: 2 Packages (Business, Premium) */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {/* TIER 2: Business (Highlighted) */}
-              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-600 flex flex-col relative transform md:-translate-y-4">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-600 flex flex-col relative transform md:-translate-y-4 hover:scale-105 transition-transform duration-300">
                 <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
                   Most Popular
                 </div>
-                <div className="p-8 flex-1">
+                <div className="p-6 flex-1">
                   <h3 className="text-xl font-bold text-blue-600 mb-2">Business Package</h3>
                   <p className="text-sm text-gray-500 mb-6">Automate your operations.</p>
                   
                   {currency === 'PHP' ? (
-                    <div className="mb-6">
+                    <div className="mb-6 bg-blue-50/50 rounded-xl p-4 border border-blue-100">
                       <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
                       <span className="text-3xl font-extrabold text-gray-900">₱40,000</span>
-                      <div className="mt-2">
+                      <div className="mt-2 pt-2 border-t border-blue-100">
                         <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
                         <span className="text-xl font-bold text-gray-600">₱2,500</span><span className="text-gray-500 text-sm">/mo</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="mb-6">
+                    <div className="mb-6 bg-blue-50/50 rounded-xl p-4 border border-blue-100">
                       <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
                       <span className="text-3xl font-extrabold text-gray-900">$714</span>
-                      <div className="mt-2">
+                      <div className="mt-2 pt-2 border-t border-blue-100">
                         <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
                         <span className="text-xl font-bold text-gray-600">$45</span><span className="text-gray-500 text-sm">/mo</span>
                       </div>
@@ -1086,7 +1249,7 @@ function App() {
                     ))}
                   </ul>
                 </div>
-                <div className="p-8 bg-blue-50 mt-auto">
+                <div className="p-6 bg-blue-50 mt-auto">
                   <a href="#contact" className="block w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition-colors text-center shadow-lg">
                     Get Started
                   </a>
@@ -1094,25 +1257,25 @@ function App() {
               </div>
 
               {/* TIER 3: Premium */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
-                <div className="p-8 flex-1">
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col hover:scale-105 transition-transform duration-300">
+                <div className="p-6 flex-1">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Premium Package</h3>
                   <p className="text-sm text-gray-500 mb-6">Full automation & scale.</p>
                   
                   {currency === 'PHP' ? (
-                    <div className="mb-6">
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
                       <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
                       <span className="text-3xl font-extrabold text-gray-900">₱80,000</span>
-                      <div className="mt-2">
+                      <div className="mt-2 pt-2 border-t border-gray-200">
                         <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
                         <span className="text-xl font-bold text-gray-600">₱5,000</span><span className="text-gray-500 text-sm">/mo</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="mb-6">
+                    <div className="mb-6 bg-slate-50 rounded-xl p-4">
                       <p className="text-gray-900 font-bold text-sm uppercase">One-time Setup</p>
                       <span className="text-3xl font-extrabold text-gray-900">$1,428</span>
-                      <div className="mt-2">
+                      <div className="mt-2 pt-2 border-t border-gray-200">
                         <p className="text-gray-900 font-bold text-sm uppercase">Monthly</p>
                         <span className="text-xl font-bold text-gray-600">$89</span><span className="text-gray-500 text-sm">/mo</span>
                       </div>
@@ -1140,7 +1303,7 @@ function App() {
                     ))}
                   </ul>
                 </div>
-                <div className="p-8 bg-gray-50 mt-auto">
+                <div className="p-6 bg-gray-50 mt-auto">
                   <a href="#contact" className="block w-full bg-white border-2 border-gray-300 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-center">
                     Get Started
                   </a>
@@ -1165,12 +1328,13 @@ function App() {
 
           <Reveal className="max-w-3xl mx-auto space-y-4">
             {[
+              { q: "What does the ₱1,000 monthly fee cover?", a: "It covers your high-speed hosting, SSL security certificate, automation tools, daily backups, technical maintenance, and minor content updates (like changing text or images) so you never have to worry about your website breaking." },
               { q: "Do I need technical knowledge?", a: "Not at all! We handle all the technical work. We'll train you on the basics in 30 minutes, and it's easy enough for anyone to use." },
               { q: "What if I want changes later?", a: "Minor updates and content changes are included free with your monthly plan. Major redesigns or new features have additional fees." },
               { q: "Can I cancel anytime?", a: "Yes, there's no long-term contract. We recommend staying for at least 6 months to see the full benefits, but you can cancel with 30 days notice." },
               { q: "What about domain and hosting?", a: "Everything is included! We handle domain registration, hosting, SSL certificates, and all technical maintenance." },
               { q: "Do you offer payment plans?", a: "Yes! For the setup fee, you can pay 50% upfront and 50% upon launch. Monthly fees are billed monthly." },
-              { q: "What payment methods do you accept?", a: "For PHP: GCash, PayMaya, Bank Transfer, Credit/Debit Card. For USD: PayPal, Stripe, Wire Transfer, Credit/Debit Card." },
+              { q: "What payment methods do you accept?", a: "For PHP: GCash and Bank Transfer only. For USD: PayPal only." },
               { q: "How long does it take to build?", a: "Most websites are completed in 1-2 weeks from the discovery call. Rush service available for additional fee." },
               { q: "Do you provide training?", a: "Yes! We include training on how to update your site, manage bookings/orders, and use your automation tools." }
             ].map((item, i) => (
@@ -1430,9 +1594,7 @@ function App() {
                <h4 className="font-bold text-lg mb-4">We Accept</h4>
                <div className="flex flex-wrap gap-2">
                  <div className="bg-white/10 rounded px-2 py-1"><span className="text-xs font-bold text-blue-300">GCash</span></div>
-                 <div className="bg-white/10 rounded px-2 py-1"><span className="text-xs font-bold text-green-300">PayMaya</span></div>
                  <div className="bg-white/10 rounded px-2 py-1"><span className="text-xs font-bold text-blue-500">PayPal</span></div>
-                 <div className="bg-white/10 rounded px-2 py-1"><span className="text-xs font-bold text-purple-400">Stripe</span></div>
                  <div className="bg-white/10 rounded px-2 py-1 flex items-center gap-1"><CreditCard className="w-3 h-3" /><span className="text-xs font-bold">Visa</span></div>
                  <div className="bg-white/10 rounded px-2 py-1 flex items-center gap-1"><CreditCard className="w-3 h-3" /><span className="text-xs font-bold">Mastercard</span></div>
                </div>

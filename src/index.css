@@ -22,4 +22,23 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+
+  @keyframes shimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 1.5s linear infinite;
+  }
+
+  @keyframes flow {
+    0% { transform: translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateX(92%); opacity: 0; }
+  }
+
+  .animate-flow {
+    animation: flow 1.2s linear infinite;
+  }
 }

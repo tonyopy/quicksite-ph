@@ -27,8 +27,12 @@ const CleaningDesign3 = () => {
 
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center bg-slate-900">
-        <div className="absolute inset-0 flex items-center justify-center opacity-10">
-           <Crown className="w-96 h-96 text-white" />
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=80"
+            className="w-full h-full object-cover opacity-40"
+            alt="Luxury Interior"
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
         <div className="relative z-10 text-center max-w-4xl px-6">
@@ -37,10 +41,10 @@ const CleaningDesign3 = () => {
             <span className="text-xs font-bold tracking-widest uppercase">Premium Housekeeping</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight">
-            Exquisite Care for <br/> <span className="italic text-amber-500">Fine Living Spaces.</span>
+            Exquisite Care for <br /> <span className="italic text-amber-500">Fine Living Spaces.</span>
           </h1>
           <p className="text-lg text-slate-400 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-            Specialized cleaning for luxury residences, penthouses, and estates. 
+            Specialized cleaning for luxury residences, penthouses, and estates.
             White-glove service with discreet, hotel-trained professionals.
           </p>
           <button className="bg-amber-600 text-white px-10 py-4 text-xs font-bold tracking-widest uppercase hover:bg-amber-700 transition-colors">

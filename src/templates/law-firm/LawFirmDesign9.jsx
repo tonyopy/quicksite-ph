@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Leaf, Globe, Wind, Droplets, Sun, ChevronRight, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Leaf, Globe, Wind, Droplets, Sun, ChevronRight, Menu, X, ArrowUpRight, ArrowRight } from 'lucide-react';
 
 function LawFirmDesign9() {
+
+  // Force re-render
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -33,20 +35,20 @@ function LawFirmDesign9() {
       {/* Hero Section */}
       <div className="relative min-h-screen flex items-center pt-24">
         <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
-           <img 
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80" 
-            alt="Forest sunlight" 
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+            alt="Forest sunlight"
             className="w-full h-full object-cover rounded-bl-[100px]"
           />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
           <div className="lg:w-1/2 pr-0 lg:pr-12">
             <div className="inline-block border border-emerald-600/30 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-8">
               Environmental Law & Advocacy
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-emerald-950 mb-8 leading-[1.1]">
-              Defending nature. <br/>
+              Defending nature. <br />
               <span className="text-emerald-600">Protecting futures.</span>
             </h1>
             <p className="text-xl text-emerald-900/70 mb-12 leading-relaxed max-w-xl">
@@ -123,9 +125,9 @@ function LawFirmDesign9() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="absolute inset-0 bg-emerald-900/10 transform rotate-3 rounded-3xl"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb7d5fa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Wind turbines" 
+              <img
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb7d5fa5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Wind turbines"
                 className="relative rounded-3xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 w-full object-cover h-[500px]"
               />
             </div>
@@ -160,7 +162,7 @@ function LawFirmDesign9() {
                 Pioneering environmental law since 1994. We are committed to using the power of the law to fight for a sustainable future for all living things.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact</h4>
               <ul className="space-y-4 text-sm opacity-80">
@@ -170,7 +172,7 @@ function LawFirmDesign9() {
                 <li>action@ecojustice.org</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Follow Us</h4>
               <div className="flex space-x-4">
@@ -180,7 +182,7 @@ function LawFirmDesign9() {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-emerald-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs opacity-60">
             <p>&copy; 2024 EcoJustice Law Group. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">

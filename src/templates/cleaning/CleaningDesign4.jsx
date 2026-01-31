@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Home } from 'lucide-react';
 
 const CleaningDesign4 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ const CleaningDesign4 = () => {
           <div className="grid md:grid-cols-2 gap-12 border-b border-black pb-20">
             <div>
               <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tighter">
-                WE CLEAN <br/> SPACES.
+                WE CLEAN <br /> SPACES.
               </h1>
               <p className="text-xl font-medium max-w-md mb-12">
                 Minimalist cleaning for modern homes. No clutter. No mess. Just clean.
@@ -40,11 +40,15 @@ const CleaningDesign4 = () => {
                 Book Appointment <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </button>
             </div>
-            <div className="bg-gray-100 aspect-square relative overflow-hidden flex items-center justify-center">
-               <div className="text-center opacity-30">
-                  <Home className="w-48 h-48 text-black mx-auto mb-4" />
-                  <span className="text-black font-bold text-2xl uppercase tracking-tighter">Minimalist Living</span>
-               </div>
+            <div className="bg-gray-100 aspect-square relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1518434068306-3843d4dd48f6?auto=format&fit=crop&w=1000&q=80"
+                alt="Minimalist Home"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute bottom-0 left-0 bg-white p-6 border-t border-r border-black">
+                <span className="text-black font-bold text-xl uppercase tracking-tighter">Minimalist Living</span>
+              </div>
             </div>
           </div>
         </div>

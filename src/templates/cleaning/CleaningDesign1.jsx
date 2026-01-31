@@ -81,11 +81,11 @@ const CleaningDesign1 = () => {
               ISO 9001:2015 Certified
             </div>
             <h1 className="text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
-              Corporate-Grade <br/>
+              Corporate-Grade <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Cleaning Excellence.</span>
             </h1>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-              The preferred facility management partner for top corporations in Metro Manila. 
+              The preferred facility management partner for top corporations in Metro Manila.
               We deliver consistency, compliance, and immaculate results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -96,7 +96,7 @@ const CleaningDesign1 = () => {
                 Download Brochure
               </button>
             </div>
-            
+
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-slate-200 pt-8">
               <div>
                 <div className="text-3xl font-bold text-slate-900 mb-1">500+</div>
@@ -112,13 +112,13 @@ const CleaningDesign1 = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="relative">
             <div className="absolute inset-0 bg-blue-600 rounded-2xl rotate-3 opacity-10"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1581578731117-10d52143b1e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" 
-              className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[600px]" 
-              alt="Professional Office Cleaning" 
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2340&q=80"
+              className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[600px]"
+              alt="Professional Office Cleaning"
             />
             {/* Floating Card */}
             <div className="absolute bottom-10 -left-10 z-20 bg-white p-6 rounded-xl shadow-2xl max-w-xs hidden lg:block border border-slate-100">
@@ -162,39 +162,39 @@ const CleaningDesign1 = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { 
-                icon: <Users className="w-6 h-6" />, 
-                title: "Office Maintenance", 
+              {
+                icon: <Users className="w-6 h-6" />,
+                title: "Office Maintenance",
                 desc: "Daily janitorial services, pantry management, and restroom sanitation.",
                 features: ["Day porters", "Night cleaning", "Supply management"]
               },
-              { 
-                icon: <Award className="w-6 h-6" />, 
-                title: "Deep Cleaning", 
+              {
+                icon: <Award className="w-6 h-6" />,
+                title: "Deep Cleaning",
                 desc: "Intensive quarterly or annual deep cleaning for carpets, upholstery, and hard floors.",
                 features: ["Steam extraction", "Floor polishing", "Grout cleaning"]
               },
-              { 
-                icon: <Shield className="w-6 h-6" />, 
-                title: "Specialized Disinfection", 
+              {
+                icon: <Shield className="w-6 h-6" />,
+                title: "Specialized Disinfection",
                 desc: "Hospital-grade misting and high-touch surface sterilization protocols.",
                 features: ["FDA-approved chemicals", "ATP testing", "Detailed reporting"]
               },
-              { 
-                icon: <CheckCircle className="w-6 h-6" />, 
-                title: "Post-Construction", 
+              {
+                icon: <CheckCircle className="w-6 h-6" />,
+                title: "Post-Construction",
                 desc: "Removal of heavy dust, debris, and paint marks for turnover-ready spaces.",
                 features: ["Rough cleaning", "Final detailing", "Window scraping"]
               },
-              { 
-                icon: <Clock className="w-6 h-6" />, 
-                title: "Event Support", 
+              {
+                icon: <Clock className="w-6 h-6" />,
+                title: "Event Support",
                 desc: "Pre-event setup cleaning and post-event waste management and restoration.",
                 features: ["On-site attendants", "Waste segregation", "Rapid turnover"]
               },
-              { 
-                icon: <Star className="w-6 h-6" />, 
-                title: "Residential Estates", 
+              {
+                icon: <Star className="w-6 h-6" />,
+                title: "Residential Estates",
                 desc: "Premium housekeeping for condominiums and private residences.",
                 features: ["Background checked", "Hotel standards", "Linen service"]
               },
@@ -311,7 +311,7 @@ const CleaningDesign1 = () => {
               <div className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">LI</div>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider">Services</h4>
             <ul className="space-y-4">

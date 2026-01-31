@@ -32,11 +32,11 @@ const CleaningDesign2 = () => {
           <div className="order-2 md:order-1">
             <span className="text-emerald-600 font-bold tracking-widest uppercase text-xs mb-4 block">100% Non-Toxic & Organic</span>
             <h1 className="text-5xl md:text-6xl font-medium text-stone-800 mb-8 leading-[1.1]">
-              A Clean Home, <br/>
+              A Clean Home, <br />
               <span className="text-emerald-700 italic">Naturally.</span>
             </h1>
             <p className="text-lg text-stone-500 mb-10 leading-relaxed">
-              We use only plant-based, biodegradable cleaning products. 
+              We use only plant-based, biodegradable cleaning products.
               Safe for your kids, safe for your pets, and safe for the planet.
             </p>
             <button className="bg-emerald-700 text-white px-10 py-4 rounded-full font-medium hover:bg-emerald-800 transition-colors">
@@ -45,11 +45,18 @@ const CleaningDesign2 = () => {
           </div>
           <div className="order-1 md:order-2 relative">
             <div className="absolute inset-0 bg-emerald-100 rounded-full blur-3xl opacity-50 transform translate-x-10 translate-y-10"></div>
-            <div className="relative rounded-[3rem] shadow-xl w-full h-[400px] bg-emerald-50 flex items-center justify-center overflow-hidden">
-               <div className="text-center opacity-50">
-                  <Leaf className="w-32 h-32 text-emerald-600 mx-auto mb-4" />
-                  <span className="text-emerald-800 font-bold text-xl tracking-wider uppercase">Eco-Friendly Clean</span>
-               </div>
+            <div className="relative rounded-[3rem] shadow-xl w-full h-[400px] bg-emerald-50 overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80"
+                alt="Eco Friendly Interior"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-sm">
+                <div className="flex items-center gap-2">
+                  <Leaf className="w-5 h-5 text-emerald-600" />
+                  <span className="text-emerald-800 font-bold text-sm tracking-wider uppercase">Eco-Friendly Clean</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -30,6 +30,16 @@ function ConstructionDesign5() {
 
       {/* Hero */}
       <header className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+            alt="Electrical Background"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/80"></div>
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center space-x-2 bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 px-3 py-1 rounded text-xs font-bold uppercase tracking-widest mb-6">
@@ -37,7 +47,7 @@ function ConstructionDesign5() {
               <span>Licensed Master Electricians</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-              Powering Your World <br/>
+              Powering Your World <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Safely & Efficiently.</span>
             </h1>
             <p className="text-xl text-gray-400 mb-10 max-w-xl leading-relaxed">
@@ -53,9 +63,8 @@ function ConstructionDesign5() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-yellow-500/10 to-transparent pointer-events-none"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500 rounded-full blur-[150px] opacity-10"></div>
       </header>
 
@@ -105,9 +114,9 @@ function ConstructionDesign5() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 relative">
               <div className="absolute -inset-4 bg-yellow-400/20 rounded-2xl transform -rotate-2"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="Electrician working on panel" 
+              <img
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Electrician working on panel"
                 className="rounded-2xl relative z-10 shadow-2xl"
               />
             </div>
@@ -116,7 +125,7 @@ function ConstructionDesign5() {
               <p className="text-gray-400 mb-8 leading-relaxed">
                 Electrical work isn't something to take chances with. Our certified professionals ensure every job is done to the highest safety standards.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="mt-1 bg-yellow-400/10 p-2 rounded text-yellow-400">
@@ -127,7 +136,7 @@ function ConstructionDesign5() {
                     <p className="text-gray-400 text-sm">No hidden fees. You know the price before we start.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="mt-1 bg-yellow-400/10 p-2 rounded text-yellow-400">
                     <Check className="w-5 h-5" />

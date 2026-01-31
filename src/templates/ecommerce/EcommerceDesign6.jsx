@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShoppingBag, Menu, Star, Smile, Gift, Cloud } from 'lucide-react';
+import { Search, ShoppingBag, Menu, Star, Smile, Gift, Cloud, Heart } from 'lucide-react';
 
 const EcommerceDesign6 = () => {
   return (
@@ -23,9 +23,8 @@ const EcommerceDesign6 = () => {
 
           <div className="hidden md:flex space-x-2">
             {['Toys', 'Clothing', 'School', 'Baby', 'Sale'].map((item, i) => (
-              <a key={item} href="#" className={`px-4 py-2 rounded-full font-bold text-sm transition-transform hover:scale-105 ${
-                i % 2 === 0 ? 'bg-blue-100 text-blue-600 hover:bg-blue-200' : 'bg-pink-100 text-pink-600 hover:bg-pink-200'
-              }`}>
+              <a key={item} href="#" className={`px-4 py-2 rounded-full font-bold text-sm transition-transform hover:scale-105 ${i % 2 === 0 ? 'bg-blue-100 text-blue-600 hover:bg-blue-200' : 'bg-pink-100 text-pink-600 hover:bg-pink-200'
+                }`}>
                 {item}
               </a>
             ))}
@@ -57,7 +56,7 @@ const EcommerceDesign6 = () => {
                 New Arrivals!
               </div>
               <h1 className="text-5xl md:text-6xl font-black text-gray-800 mb-6 leading-tight">
-                Play, Learn & <br/>
+                Play, Learn & <br />
                 <span className="text-purple-500">Grow Together</span>
               </h1>
               <p className="text-gray-500 text-lg mb-8 max-w-md">
@@ -68,9 +67,9 @@ const EcommerceDesign6 = () => {
               </button>
             </div>
             <div className="flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1566576912906-25433ec38e6a?auto=format&fit=crop&w=800&q=80" 
-                alt="Happy Kid with Toys" 
+              <img
+                src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80"
+                alt="Happy Kid with Toys"
                 className="rounded-3xl shadow-2xl border-8 border-white transform rotate-3 hover:rotate-6 transition-transform duration-300"
               />
             </div>
@@ -87,9 +86,8 @@ const EcommerceDesign6 = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {['0-2 Years', '2-4 Years', '5-7 Years', '8-12 Years', 'Teens'].map((age, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer border-b-4 border-blue-200 hover:border-blue-400 group">
-                <div className={`w-16 h-16 mx-auto rounded-full mb-3 flex items-center justify-center text-2xl ${
-                  idx % 3 === 0 ? 'bg-yellow-100' : idx % 3 === 1 ? 'bg-green-100' : 'bg-pink-100'
-                }`}>
+                <div className={`w-16 h-16 mx-auto rounded-full mb-3 flex items-center justify-center text-2xl ${idx % 3 === 0 ? 'bg-yellow-100' : idx % 3 === 1 ? 'bg-green-100' : 'bg-pink-100'
+                  }`}>
                   {idx === 0 ? '👶' : idx === 1 ? '🛴' : idx === 2 ? '🧩' : idx === 3 ? '🎮' : '🎧'}
                 </div>
                 <h3 className="font-bold text-gray-700 group-hover:text-blue-500">{age}</h3>
@@ -107,9 +105,9 @@ const EcommerceDesign6 = () => {
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="bg-white p-4 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
                 <div className="bg-gray-50 rounded-2xl h-48 mb-4 p-4 flex items-center justify-center relative">
-                  <img 
+                  <img
                     src={`https://images.unsplash.com/photo-${item === 1 ? '1587654780291-39c9404d746b' : item === 2 ? '1596461404969-9ae70f2830c1' : item === 3 ? '1558877585-89d3d7564d71' : '1532330384815-c16e488d6619'}?auto=format&fit=crop&w=500&q=80`}
-                    alt="Toy" 
+                    alt="Toy"
                     className="max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                   <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md text-gray-400 hover:text-red-500">
@@ -118,7 +116,7 @@ const EcommerceDesign6 = () => {
                 </div>
                 <div className="px-2">
                   <div className="flex gap-1 mb-2">
-                    {[1,2,3,4,5].map(s => <Star key={s} size={12} className="text-yellow-400 fill-current" />)}
+                    {[1, 2, 3, 4, 5].map(s => <Star key={s} size={12} className="text-yellow-400 fill-current" />)}
                   </div>
                   <h3 className="font-bold text-lg text-gray-800 mb-1 leading-tight">Super Fun Toy Set {item}</h3>
                   <div className="flex justify-between items-center mt-3">

@@ -25,7 +25,7 @@ function ClinicDesign1() {
             <Activity className="w-8 h-8 text-blue-600" />
             Medi<span className="text-blue-600">Care</span>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 font-medium text-slate-600">
             <a href="#services" className="hover:text-blue-600 transition">Services</a>
@@ -90,27 +90,27 @@ function ClinicDesign1() {
               </div>
             </div>
           </div>
-          
+
           <div className="relative">
-             <div className="absolute -top-10 -right-10 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
-             <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-teal-200 rounded-full blur-3xl opacity-30"></div>
-             <img 
-               src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-               alt="Doctor with Patient" 
-               className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
-             />
-             {/* Float Card */}
-             <div className="absolute bottom-8 -left-8 bg-white p-4 rounded-xl shadow-xl z-20 hidden md:block border-l-4 border-blue-600">
-                <div className="flex items-center gap-3">
-                   <div className="bg-green-100 p-2 rounded-full">
-                      <Star className="w-6 h-6 text-green-600 fill-current" />
-                   </div>
-                   <div>
-                      <div className="font-bold text-slate-900">4.9/5 Rating</div>
-                      <div className="text-xs text-slate-500">Based on 2,000+ reviews</div>
-                   </div>
+            <div className="absolute -top-10 -right-10 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-teal-200 rounded-full blur-3xl opacity-30"></div>
+            <img
+              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1200&q=80"
+              alt="Doctor with Patient"
+              className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
+            />
+            {/* Float Card */}
+            <div className="absolute bottom-8 -left-8 bg-white p-4 rounded-xl shadow-xl z-20 hidden md:block border-l-4 border-blue-600">
+              <div className="flex items-center gap-3">
+                <div className="bg-green-100 p-2 rounded-full">
+                  <Star className="w-6 h-6 text-green-600 fill-current" />
                 </div>
-             </div>
+                <div>
+                  <div className="font-bold text-slate-900">4.9/5 Rating</div>
+                  <div className="text-xs text-slate-500">Based on 2,000+ reviews</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -151,9 +151,9 @@ function ClinicDesign1() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                alt="Medical Team" 
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80"
+                alt="Medical Team"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white text-slate-900 p-8 rounded-2xl shadow-xl hidden md:block">

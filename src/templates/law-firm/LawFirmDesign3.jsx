@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Home, Users, Sun, Phone, Mail, ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import { Heart, Home, Users, Sun, Phone, Mail, ChevronDown, Menu, X, ArrowRight, Check, Lock } from 'lucide-react';
 
 function LawFirmDesign3() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,7 +71,7 @@ function LawFirmDesign3() {
       <div className="relative bg-teal-50 py-20 md:py-32 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-teal-100 rounded-l-full opacity-50 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-100 rounded-full opacity-50 -translate-x-1/3 translate-y-1/3"></div>
-        
+
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -94,14 +94,14 @@ function LawFirmDesign3() {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Family holding hands" 
+              <img
+                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Family holding hands"
                 className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl z-20 max-w-xs">
                 <div className="flex items-center mb-2">
-                  {[1,2,3,4,5].map(i => (
+                  {[1, 2, 3, 4, 5].map(i => (
                     <Sun key={i} className="h-4 w-4 text-orange-400 fill-current" />
                   ))}
                 </div>
@@ -208,7 +208,7 @@ function LawFirmDesign3() {
                 Dedicated to helping families navigate life's transitions with compassion, expertise, and integrity.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-slate-800 mb-4">Practice Areas</h4>
               <ul className="space-y-2 text-sm text-slate-500">
@@ -218,7 +218,7 @@ function LawFirmDesign3() {
                 <li><a href="#" className="hover:text-teal-600">Mediation</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-slate-800 mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-slate-500">
@@ -228,7 +228,7 @@ function LawFirmDesign3() {
                 <li>hello@harmonyfamilylaw.com</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-slate-800 mb-4">Office Hours</h4>
               <ul className="space-y-2 text-sm text-slate-500">
@@ -238,7 +238,7 @@ function LawFirmDesign3() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
             <p>&copy; 2024 Harmony Family Law Group. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">

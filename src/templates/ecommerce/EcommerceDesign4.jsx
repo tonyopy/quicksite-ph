@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, ShoppingCart, Leaf, User, ArrowRight, Sprout } from 'lucide-react';
+import { Search, ShoppingCart, Leaf, User, ArrowRight, Sprout, Star } from 'lucide-react';
 
 const EcommerceDesign4 = () => {
   return (
@@ -10,7 +10,7 @@ const EcommerceDesign4 = () => {
           <div className="flex items-center gap-2 text-2xl font-bold text-green-800">
             <Leaf className="fill-current" /> PureEarth
           </div>
-          
+
           <div className="hidden md:flex space-x-8 font-medium text-stone-600">
             <a href="#" className="hover:text-green-700 transition-colors">Shop All</a>
             <a href="#" className="hover:text-green-700 transition-colors">Our Story</a>
@@ -34,14 +34,14 @@ const EcommerceDesign4 = () => {
         <div className="container mx-auto px-6">
           <div className="bg-[#e7ece3] rounded-[3rem] p-12 md:p-24 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-green-200 rounded-full blur-[80px] opacity-60 translate-x-1/3 -translate-y-1/3"></div>
-            
+
             <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-green-800 text-sm font-bold shadow-sm">
                   <Sprout className="w-4 h-4" /> 100% Organic Ingredients
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold text-stone-900 leading-tight">
-                  Skincare that loves <br/> <span className="text-green-700">your skin & the planet.</span>
+                  Skincare that loves <br /> <span className="text-green-700">your skin & the planet.</span>
                 </h1>
                 <p className="text-stone-600 text-lg max-w-md">
                   Experience the power of nature with our ethically sourced, cruelty-free, and vegan skincare line.
@@ -56,9 +56,9 @@ const EcommerceDesign4 = () => {
                 </div>
               </div>
               <div className="relative flex justify-center">
-                 <img 
-                  src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=800&q=80" 
-                  alt="Organic Products" 
+                <img
+                  src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=800&q=80"
+                  alt="Organic Products"
                   className="rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 max-w-xs md:max-w-md"
                 />
               </div>
@@ -98,9 +98,9 @@ const EcommerceDesign4 = () => {
             {[1, 2, 3].map((item) => (
               <div key={item} className="bg-white p-4 rounded-3xl shadow-sm hover:shadow-xl transition-shadow group">
                 <div className="bg-[#f0f4ee] rounded-2xl h-64 mb-6 flex items-center justify-center relative overflow-hidden">
-                  <img 
+                  <img
                     src={`https://images.unsplash.com/photo-${item === 1 ? '1608248597279-f99d160bfbc8' : item === 2 ? '1598440947619-2c35fc9af908' : '1620916566398-39f1143ab7be'}?auto=format&fit=crop&w=500&q=80`}
-                    alt="Product" 
+                    alt="Product"
                     className="h-48 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                   />
                   <button className="absolute bottom-4 right-4 bg-green-800 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">

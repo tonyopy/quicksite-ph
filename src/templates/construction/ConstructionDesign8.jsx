@@ -27,7 +27,7 @@ function ConstructionDesign8() {
               <div className="text-xs text-stone-500 tracking-wider uppercase">Flooring & Tile</div>
             </div>
           </div>
-          
+
           <nav className="hidden md:flex space-x-10 font-bold text-sm uppercase tracking-wide">
             <a href="#" className="hover:text-stone-600 transition-colors">Hardwood</a>
             <a href="#" className="hover:text-stone-600 transition-colors">Tile & Stone</a>
@@ -44,19 +44,19 @@ function ConstructionDesign8() {
       {/* Hero */}
       <section className="relative h-[700px] flex items-center">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1581858726768-758a486ea860?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-            alt="Herringbone Floor" 
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1950&q=80"
+            alt="Herringbone Floor"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-stone-900/30"></div>
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="bg-white p-10 md:p-16 max-w-xl shadow-2xl">
             <div className="w-12 h-1 bg-stone-900 mb-8"></div>
             <h1 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-              The Foundation of <br/><span className="font-bold">Fine Living.</span>
+              The Foundation of <br /><span className="font-bold">Fine Living.</span>
             </h1>
             <p className="text-stone-600 mb-8 leading-relaxed">
               Premium flooring solutions installed by master craftsmen. From timeless hardwood to modern large-format porcelain.
@@ -73,9 +73,9 @@ function ConstructionDesign8() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-1">
             <div className="relative group h-96 overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Hardwood" 
+              <img
+                src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Hardwood"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition-colors"></div>
@@ -86,9 +86,9 @@ function ConstructionDesign8() {
             </div>
 
             <div className="relative group h-96 overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Tile" 
+              <img
+                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Tile"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition-colors"></div>
@@ -99,9 +99,9 @@ function ConstructionDesign8() {
             </div>
 
             <div className="relative group h-96 overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="LVP" 
+              <img
+                src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="LVP"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition-colors"></div>

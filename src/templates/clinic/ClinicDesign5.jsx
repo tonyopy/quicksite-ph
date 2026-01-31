@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Leaf, Calendar, Phone, MapPin, Clock, Menu, X, Mail, Heart, Coffee, Sun } from 'lucide-react';
+import { Leaf, Calendar, Phone, MapPin, Clock, Menu, X, Mail, Heart, Coffee, Sun, User, Cloud, Shield, Star, Users } from 'lucide-react';
 
 function ClinicDesign5() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#f4f5f0] font-sans text-stone-700 selection:bg-green-100">
-      
+
       {/* Navigation */}
       <nav className="sticky top-0 w-full bg-[#f4f5f0]/95 backdrop-blur-sm z-50 border-b border-stone-200">
         <div className="container mx-auto px-6 py-6 flex justify-between items-center">
@@ -14,7 +14,7 @@ function ClinicDesign5() {
             <Leaf className="w-6 h-6 text-green-700" />
             mindful<span className="font-bold">space</span>
           </div>
-          
+
           <div className="hidden md:flex space-x-10 text-sm font-medium text-stone-500">
             <a href="#approach" className="hover:text-green-800 transition">Our Approach</a>
             <a href="#services" className="hover:text-green-800 transition">Services</a>
@@ -48,7 +48,7 @@ function ClinicDesign5() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <h1 className="text-5xl lg:text-6xl font-serif text-stone-800 mb-8 leading-tight">
-                A Safe Place to <br/>
+                A Safe Place to <br />
                 <span className="text-green-800 italic">Heal & Grow</span>
               </h1>
               <p className="text-lg text-stone-600 mb-10 leading-relaxed max-w-md">
@@ -65,9 +65,9 @@ function ClinicDesign5() {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="absolute inset-0 bg-green-100 rounded-full transform translate-x-8 translate-y-8 -z-10"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1544367563-12123d895e29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Peaceful Moment" 
+              <img
+                src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1000&q=80"
+                alt="Peaceful Moment"
                 className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]"
               />
             </div>
@@ -140,8 +140,8 @@ function ClinicDesign5() {
             <a href="#contact" className="text-green-300 hover:text-white transition font-medium">Match with a Therapist &rarr;</a>
           </div>
           <div className="md:w-1/2 grid grid-cols-2 gap-4">
-             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Therapist 1" className="rounded-lg opacity-80 hover:opacity-100 transition duration-500" />
-             <img src="https://images.unsplash.com/photo-1537368910025-bc008f3416ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Therapist 2" className="rounded-lg opacity-80 hover:opacity-100 transition duration-500 translate-y-8" />
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Therapist 1" className="rounded-lg opacity-80 hover:opacity-100 transition duration-500" />
+            <img src="https://images.unsplash.com/photo-1537368910025-bc008f3416ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Therapist 2" className="rounded-lg opacity-80 hover:opacity-100 transition duration-500 translate-y-8" />
           </div>
         </div>
       </section>
@@ -186,7 +186,7 @@ function ClinicDesign5() {
               </button>
             </form>
           </div>
-          
+
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-center text-sm text-stone-500">
             <div>
               <Phone className="w-5 h-5 mx-auto mb-3 text-stone-400" />

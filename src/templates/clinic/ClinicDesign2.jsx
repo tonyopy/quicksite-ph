@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Smile, Heart, Star, Phone, MapPin, Clock, Calendar, CheckCircle, Menu, X, Mail, Baby, Stethoscope } from 'lucide-react';
+import { Smile, Heart, Star, Phone, MapPin, Clock, Calendar, CheckCircle, Menu, X, Mail, Baby, Stethoscope, Shield } from 'lucide-react';
 
 function ClinicDesign2() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-yellow-50 font-sans text-slate-800">
-      
+
       {/* Navigation */}
       <nav className="sticky top-0 w-full bg-white z-50 shadow-sm border-b border-yellow-100">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -14,7 +14,7 @@ function ClinicDesign2() {
             <Smile className="w-8 h-8 text-yellow-400 fill-current" />
             Little<span className="text-blue-400">Smiles</span>
           </div>
-          
+
           <div className="hidden md:flex space-x-8 font-bold text-slate-600">
             <a href="#services" className="hover:text-orange-500 transition">Services</a>
             <a href="#doctors" className="hover:text-orange-500 transition">Our Team</a>
@@ -69,38 +69,38 @@ function ClinicDesign2() {
                 Explore Services
               </a>
             </div>
-            
+
             <div className="flex items-center gap-6 pt-4">
               <div className="flex -space-x-4">
-                {[1,2,3,4].map(i => (
+                {[1, 2, 3, 4].map(i => (
                   <div key={i} className="w-12 h-12 rounded-full border-4 border-yellow-50 bg-gray-200 overflow-hidden">
                     <img src={`https://randomuser.me/api/portraits/women/${i + 20}.jpg`} alt="Parent" />
                   </div>
                 ))}
               </div>
               <div className="font-bold text-slate-600">
-                Trusted by 5,000+ <br/> Happy Parents
+                Trusted by 5,000+ <br /> Happy Parents
               </div>
             </div>
           </div>
-          
+
           <div className="relative">
-             <img 
-               src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-               alt="Happy Kid with Doctor" 
-               className="rounded-3xl shadow-2xl relative z-10 w-full object-cover transform rotate-2 hover:rotate-0 transition-transform duration-500 border-8 border-white"
-             />
-             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block border-b-8 border-blue-400">
-                <div className="flex items-center gap-4">
-                   <div className="bg-yellow-100 p-3 rounded-full">
-                      <Smile className="w-8 h-8 text-yellow-600" />
-                   </div>
-                   <div>
-                      <div className="font-black text-2xl text-slate-900">100%</div>
-                      <div className="font-bold text-slate-500">Ouch-Free Promise</div>
-                   </div>
+            <img
+              src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Happy Kid with Doctor"
+              className="rounded-3xl shadow-2xl relative z-10 w-full object-cover transform rotate-2 hover:rotate-0 transition-transform duration-500 border-8 border-white"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block border-b-8 border-blue-400">
+              <div className="flex items-center gap-4">
+                <div className="bg-yellow-100 p-3 rounded-full">
+                  <Smile className="w-8 h-8 text-yellow-600" />
                 </div>
-             </div>
+                <div>
+                  <div className="font-black text-2xl text-slate-900">100%</div>
+                  <div className="font-bold text-slate-500">Ouch-Free Promise</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -136,34 +136,34 @@ function ClinicDesign2() {
 
       {/* About / Fun Facts */}
       <section id="about" className="py-24 bg-blue-500 text-white relative overflow-hidden">
-         <div className="container mx-auto px-6 relative z-10">
-           <div className="grid lg:grid-cols-2 gap-16 items-center">
-             <div>
-               <h2 className="text-4xl lg:text-5xl font-black mb-6">Not Your Average Doctor's Office</h2>
-               <p className="text-blue-100 text-lg mb-8 font-medium">
-                 We believe healing starts with a smile. Our clinic is designed to be a playground for health, where kids feel safe, heard, and happy.
-               </p>
-               <ul className="space-y-4 font-bold text-lg">
-                 <li className="flex items-center gap-3">
-                   <div className="bg-white/20 p-1 rounded-full"><CheckCircle className="w-5 h-5" /></div>
-                   <span>Colorful, toy-filled waiting rooms</span>
-                 </li>
-                 <li className="flex items-center gap-3">
-                   <div className="bg-white/20 p-1 rounded-full"><CheckCircle className="w-5 h-5" /></div>
-                   <span>Stickers and brave-badges for everyone</span>
-                 </li>
-                 <li className="flex items-center gap-3">
-                   <div className="bg-white/20 p-1 rounded-full"><CheckCircle className="w-5 h-5" /></div>
-                   <span>Friendly doctors who speak "kid"</span>
-                 </li>
-               </ul>
-             </div>
-             <div className="grid grid-cols-2 gap-4">
-               <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" className="rounded-2xl shadow-lg transform translate-y-8" alt="Kid Playing" />
-               <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" className="rounded-2xl shadow-lg transform -translate-y-8" alt="Doctor Smiling" />
-             </div>
-           </div>
-         </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-black mb-6">Not Your Average Doctor's Office</h2>
+              <p className="text-blue-100 text-lg mb-8 font-medium">
+                We believe healing starts with a smile. Our clinic is designed to be a playground for health, where kids feel safe, heard, and happy.
+              </p>
+              <ul className="space-y-4 font-bold text-lg">
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 p-1 rounded-full"><CheckCircle className="w-5 h-5" /></div>
+                  <span>Colorful, toy-filled waiting rooms</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 p-1 rounded-full"><CheckCircle className="w-5 h-5" /></div>
+                  <span>Stickers and brave-badges for everyone</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="bg-white/20 p-1 rounded-full"><CheckCircle className="w-5 h-5" /></div>
+                  <span>Friendly doctors who speak "kid"</span>
+                </li>
+              </ul>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" className="rounded-2xl shadow-lg transform translate-y-8" alt="Kid Playing" />
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" className="rounded-2xl shadow-lg transform -translate-y-8" alt="Doctor Smiling" />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact */}
@@ -173,7 +173,7 @@ function ClinicDesign2() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-black text-slate-900 mb-4">Join the Little Smiles Family</h2>
               <p className="text-slate-600 mb-8 font-medium">Ready for a checkup? Fill out the form below and we'll get back to you faster than a speeding toddler!</p>
-              
+
               <form className="bg-white p-8 rounded-2xl shadow-lg text-left">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>

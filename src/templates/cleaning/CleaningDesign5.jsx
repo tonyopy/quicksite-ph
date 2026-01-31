@@ -33,10 +33,10 @@ const CleaningDesign5 = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl md:text-7xl font-black text-slate-800 mb-6 leading-tight">
-              Don't stress <br/> the <span className="text-blue-500">mess!</span>
+              Don't stress <br /> the <span className="text-blue-500">mess!</span>
             </h1>
             <p className="text-xl text-slate-500 mb-8 font-medium">
-              We make your home sparkle so you can focus on the fun stuff. 
+              We make your home sparkle so you can focus on the fun stuff.
               Friendly cleaners, happy homes!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -48,11 +48,15 @@ const CleaningDesign5 = () => {
           <div className="relative">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-200 rounded-full blur-3xl opacity-50"></div>
-            <div className="relative rounded-[3rem] border-8 border-white shadow-2xl bg-yellow-100 w-full h-[400px] flex items-center justify-center rotate-2 hover:rotate-0 transition-transform duration-500">
-               <div className="text-center opacity-60">
-                  <Smile className="w-32 h-32 text-yellow-500 mx-auto mb-4" />
-                  <span className="text-yellow-700 font-black text-2xl tracking-tight">Happy Home</span>
-               </div>
+            <div className="relative rounded-[3rem] border-8 border-white shadow-2xl bg-yellow-100 w-full h-[400px] overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 group">
+              <img
+                src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1000&q=80"
+                alt="Happy Clean Home"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute bottom-6 right-6 bg-white px-6 py-2 rounded-full shadow-sm text-yellow-600 font-black flex items-center gap-2">
+                <Smile className="w-5 h-5" /> 100% Happy
+              </div>
             </div>
           </div>
         </div>

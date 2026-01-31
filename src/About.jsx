@@ -1,41 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Linkedin, Facebook, Globe, Award, Code, Zap } from 'lucide-react';
+import Reveal from './components/ui/Reveal';
 
-function Reveal({ children, className = "" }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-      }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  return (
-    <div ref={ref} className={`${className} reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
-      {children}
-    </div>
-  );
-}
 
 function About({ onBack }) {
   useEffect(() => {
@@ -52,7 +19,7 @@ function About({ onBack }) {
       {/* Navigation Bar for About Page */}
       <nav className="absolute top-0 w-full p-6 z-10">
         <div className="container mx-auto">
-          <button 
+          <button
             onClick={onBack}
             className="group flex items-center text-gray-600 hover:text-blue-600 font-bold transition-colors bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-100 shadow-sm hover:shadow-md"
           >
@@ -66,7 +33,7 @@ function About({ onBack }) {
       <section className="relative pt-32 pb-20 bg-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.05] pointer-events-none"></div>
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-3xl opacity-50 animate-pulse pointer-events-none"></div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <Reveal>
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
@@ -87,36 +54,36 @@ function About({ onBack }) {
               {/* Left: Founder Visual */}
               <div className="md:w-2/5 bg-gradient-to-br from-blue-600 to-indigo-900 relative p-8 flex flex-col items-center justify-center text-center text-white min-h-[400px]">
                 <div className="absolute inset-0 bg-grid-white/[0.1] pointer-events-none"></div>
-                
+
                 {/* Founder Avatar Placeholder */}
                 <div className="w-40 h-40 rounded-full bg-white/10 backdrop-blur-md border-4 border-white/20 flex items-center justify-center text-5xl font-bold mb-6 shadow-xl relative overflow-hidden group">
                   <span className="group-hover:scale-110 transition-transform duration-500">MD</span>
                 </div>
-                
+
                 <h2 className="text-3xl font-bold mb-2">Mark Anthony Dagon</h2>
                 <p className="text-blue-200 font-medium mb-8">Founder & Lead Developer</p>
-                
+
                 <div className="flex gap-4">
-                  <a 
-                    href="https://www.linkedin.com/in/mark-anthony-dagon-41b478213/" 
-                    target="_blank" 
+                  <a
+                    href="https://www.linkedin.com/in/mark-anthony-dagon-41b478213/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all hover:scale-110 backdrop-blur-sm"
                     title="LinkedIn Profile"
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
-                  <a 
-                    href="https://www.facebook.com/profile.php?id=61574823853351" 
-                    target="_blank" 
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61574823853351"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all hover:scale-110 backdrop-blur-sm"
                     title="Facebook Page"
                   >
                     <Facebook className="w-6 h-6" />
                   </a>
-                  <a 
-                    href="mailto:info@quicksiteph.com" 
+                  <a
+                    href="mailto:quicksiteph@gmail.com"
                     className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all hover:scale-110 backdrop-blur-sm"
                     title="Email Me"
                   >
@@ -131,9 +98,9 @@ function About({ onBack }) {
                   <span className="w-12 h-1 bg-blue-600 rounded-full"></span>
                   <span className="text-blue-600 font-bold uppercase tracking-wider text-sm">Our Story</span>
                 </div>
-                
+
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Bridging the Gap Between Tech & Business</h3>
-                
+
                 <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                   <p>
                     "I started QuickSitePH with a simple goal: to stop small business owners from burning out over admin tasks."

@@ -9,7 +9,7 @@ import CondoDesign6 from './CondoDesign6';
 import CondoDesign7 from './CondoDesign7';
 import CondoDesign8 from './CondoDesign8';
 import CondoDesign9 from './CondoDesign9';
-import CondoDesign10 from './CondoDesign10';
+
 
 function DesignSwitcher() {
   const [currentDesign, setCurrentDesign] = useState('design2');
@@ -25,7 +25,7 @@ function DesignSwitcher() {
     { id: 'design7', name: 'Mid-Century Mod', component: CondoDesign7 },
     { id: 'design8', name: 'Art Deco Glam', component: CondoDesign8 },
     { id: 'design9', name: 'Boho Chic', component: CondoDesign9 },
-    { id: 'design10', name: 'Futuristic Glass', component: CondoDesign10 },
+
   ];
 
   const ActiveComponent = designs.find(d => d.id === currentDesign)?.component || CondoDesign1;
@@ -33,7 +33,7 @@ function DesignSwitcher() {
   return (
     <>
       <ActiveComponent />
-      
+
       {/* Floating Switcher */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
         {isOpen && (
@@ -49,11 +49,10 @@ function DesignSwitcher() {
                     setCurrentDesign(design.id);
                     setIsOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-between ${
-                    currentDesign === design.id
+                  className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-between ${currentDesign === design.id
                       ? 'bg-blue-600 text-white shadow-md'
                       : 'text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   {design.name}
                   {currentDesign === design.id && (
@@ -67,7 +66,7 @@ function DesignSwitcher() {
             </div>
           </div>
         )}
-        
+
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-black text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white flex items-center justify-center group"

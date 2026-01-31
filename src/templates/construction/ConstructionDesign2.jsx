@@ -50,10 +50,10 @@ function ConstructionDesign2() {
             <div className="lg:w-1/2 relative">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-stone-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1484154218962-a1c002085d2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="Beautiful Kitchen" 
-                className="rounded-2xl shadow-2xl relative z-10 w-full"
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+                alt="Beautiful Kitchen Renovation"
+                className="rounded-2xl shadow-2xl relative z-10 w-full object-cover"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl z-20 max-w-xs hidden md:block">
                 <div className="flex items-center space-x-2 mb-2">
@@ -111,11 +111,10 @@ function ConstructionDesign2() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeTab === tab 
-                      ? 'bg-stone-800 text-white shadow-md' 
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === tab
+                      ? 'bg-stone-800 text-white shadow-md'
                       : 'text-stone-600 hover:bg-stone-100'
-                  }`}
+                    }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -125,11 +124,11 @@ function ConstructionDesign2() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
-              <img 
-                src={activeTab === 'kitchen' ? "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" : 
-                     activeTab === 'bathroom' ? "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" :
-                     "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
-                alt="Project 1" 
+              <img
+                src={activeTab === 'kitchen' ? "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" :
+                  activeTab === 'bathroom' ? "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" :
+                    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
+                alt="Project 1"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -137,11 +136,11 @@ function ConstructionDesign2() {
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
-              <img 
-                src={activeTab === 'kitchen' ? "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" : 
-                     activeTab === 'bathroom' ? "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" :
-                     "https://images.unsplash.com/photo-1560185127-6a6a6c76c276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
-                alt="Project 2" 
+              <img
+                src={activeTab === 'kitchen' ? "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" :
+                  activeTab === 'bathroom' ? "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" :
+                    "https://images.unsplash.com/photo-1560185127-6a6a6c76c276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"}
+                alt="Project 2"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

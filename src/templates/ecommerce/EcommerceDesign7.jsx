@@ -34,16 +34,16 @@ const EcommerceDesign7 = () => {
       {/* Hero Section */}
       <header className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=2000&q=80" 
-            alt="Luxury Jewelry" 
+          <img
+            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=2000&q=80"
+            alt="Luxury Jewelry"
             className="w-full h-full object-cover brightness-[0.7]"
           />
         </div>
         <div className="relative z-10 text-center text-white p-12 max-w-3xl">
           <h2 className="text-sm tracking-[0.4em] uppercase mb-6 opacity-90">The Eternal Collection</h2>
           <h1 className="text-6xl md:text-7xl font-light mb-10 leading-tight">
-            Timeless Elegance <br/> <span className="italic font-serif">Reimagined</span>
+            Timeless Elegance <br /> <span className="italic font-serif">Reimagined</span>
           </h1>
           <button className="bg-white text-neutral-900 px-12 py-4 uppercase tracking-[0.2em] text-xs hover:bg-neutral-200 transition-colors duration-300">
             View Collection
@@ -57,8 +57,8 @@ const EcommerceDesign7 = () => {
           {['Necklaces', 'Earrings', 'Rings'].map((cat, idx) => (
             <div key={idx} className="group cursor-pointer">
               <div className="overflow-hidden aspect-[4/5] mb-6 relative">
-                <img 
-                  src={`https://images.unsplash.com/photo-${idx === 0 ? '1599643478518-17488fbbcd75' : idx === 1 ? '1535632066927-ab7c9ab60908' : '1605100804763-eb2fc645a45c'}?auto=format&fit=crop&w=800&q=80`}
+                <img
+                  src={`https://images.unsplash.com/photo-${idx === 0 ? '1611591437281-460bfbe1220a' : idx === 1 ? '1535632066927-ab7c9ab60908' : '1573408301185-9146fe634ad0'}?auto=format&fit=crop&w=800&q=80`}
                   alt={cat}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
@@ -96,9 +96,9 @@ const EcommerceDesign7 = () => {
           </div>
           <div className="order-1 md:order-2 relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border border-gray-300 z-0"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=1000&q=80" 
-              alt="Diamond Ring" 
+            <img
+              src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=1000&q=80"
+              alt="Diamond Ring"
               className="relative z-10 w-full shadow-xl"
             />
           </div>
@@ -111,9 +111,9 @@ const EcommerceDesign7 = () => {
           <h2 className="text-3xl font-light mb-4">Join the Inner Circle</h2>
           <p className="text-gray-500 font-sans mb-8">Receive early access to new collections and exclusive events.</p>
           <div className="flex border-b border-gray-300 pb-2">
-            <input 
-              type="email" 
-              placeholder="Your Email Address" 
+            <input
+              type="email"
+              placeholder="Your Email Address"
               className="flex-1 bg-transparent border-none outline-none font-sans placeholder-gray-400"
             />
             <button className="text-xs uppercase tracking-[0.2em] hover:text-gray-600">Subscribe</button>

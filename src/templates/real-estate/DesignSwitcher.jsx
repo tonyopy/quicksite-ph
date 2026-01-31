@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Palette, Home, Building } from 'lucide-react';
 import RealEstateDesign1 from './RealEstateDesign1';
+import RealEstateDesign2 from './RealEstateDesign2';
 import RealEstateDesign3 from './RealEstateDesign3';
 import RealEstateDesign4 from './RealEstateDesign4';
 import RealEstateDesign6 from './RealEstateDesign6';
@@ -30,7 +31,7 @@ function DesignSwitcher() {
   return (
     <>
       <ActiveComponent />
-      
+
       {/* Floating Switcher */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
         {isOpen && (
@@ -46,11 +47,10 @@ function DesignSwitcher() {
                     setCurrentDesign(design.id);
                     setIsOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-between ${
-                    currentDesign === design.id
+                  className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-between ${currentDesign === design.id
                       ? 'bg-neutral-900 text-white shadow-md'
                       : 'text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   {design.name}
                   {currentDesign === design.id && (
@@ -64,7 +64,7 @@ function DesignSwitcher() {
             </div>
           </div>
         )}
-        
+
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-neutral-900 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white flex items-center justify-center group"

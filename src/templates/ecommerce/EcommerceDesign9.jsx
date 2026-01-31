@@ -12,7 +12,7 @@ const EcommerceDesign9 = () => {
         <div className="transform -rotate-90 origin-center translate-y-8 mt-12">
           <span className="font-bold text-2xl tracking-widest text-[#8B5E3C]">CRAFTED</span>
         </div>
-        
+
         <div className="flex flex-col gap-8">
           <button className="p-3 hover:bg-[#F5F2EB] rounded-full transition-colors"><Search size={20} /></button>
           <button className="p-3 hover:bg-[#F5F2EB] rounded-full transition-colors relative">
@@ -43,12 +43,12 @@ const EcommerceDesign9 = () => {
         <header className="grid md:grid-cols-2 min-h-[90vh]">
           <div className="p-12 md:p-24 flex flex-col justify-center items-start relative overflow-hidden">
             <div className="absolute top-0 left-0 w-64 h-64 bg-[#F5F2EB] rounded-full blur-3xl -z-10 -translate-x-1/2 -translate-y-1/2"></div>
-            
+
             <span className="text-[#D97757] font-medium tracking-widest mb-4 flex items-center gap-2">
               <Leaf size={16} /> 100% HANDMADE
             </span>
             <h1 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] mb-8 leading-[1.1]">
-              Artistry in <br/>
+              Artistry in <br />
               <span className="relative inline-block">
                 Every Stitch
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#D97757] fill-current opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -64,9 +64,9 @@ const EcommerceDesign9 = () => {
             </button>
           </div>
           <div className="relative h-[50vh] md:h-auto">
-            <img 
-              src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=1000&q=80" 
-              alt="Handmade Ceramics" 
+            <img
+              src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=1000&q=80"
+              alt="Handmade Ceramics"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-[#8B5E3C] mix-blend-multiply opacity-10"></div>
@@ -85,7 +85,7 @@ const EcommerceDesign9 = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px] md:h-[600px]">
             <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer">
-              <img src="https://images.unsplash.com/photo-1596238618338-958597304190?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Ceramics" />
+              <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Ceramics" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                 <div className="text-white">
                   <h3 className="text-2xl font-serif">Ceramics & Pottery</h3>
@@ -93,7 +93,7 @@ const EcommerceDesign9 = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="relative group overflow-hidden rounded-2xl cursor-pointer">
               <img src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=600&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Textiles" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
@@ -102,7 +102,7 @@ const EcommerceDesign9 = () => {
             </div>
 
             <div className="relative group overflow-hidden rounded-2xl cursor-pointer">
-              <img src="https://images.unsplash.com/photo-1605333555219-c0c5218d6c77?auto=format&fit=crop&w=600&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Woodwork" />
+              <img src="https://images.unsplash.com/photo-1549488344-c30b3f2be38a?auto=format&fit=crop&w=600&q=80" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Woodwork" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <h3 className="text-xl font-serif text-white">Woodwork</h3>
               </div>
@@ -128,9 +128,9 @@ const EcommerceDesign9 = () => {
               {[1, 2, 3, 4].map((item) => (
                 <div key={item} className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
                   <div className="relative aspect-square mb-4 overflow-hidden rounded-lg bg-gray-100">
-                    <img 
-                      src={`https://images.unsplash.com/photo-${item === 1 ? '1610701596007-11502861dcfa' : item === 2 ? '1616486968818-bd2588d9c1b2' : item === 3 ? '1576426863863-13b984063831' : '1583847268964-b28dc8f51f92'}?auto=format&fit=crop&w=400&q=80`}
-                      alt="Product" 
+                    <img
+                      src={`https://images.unsplash.com/photo-${item === 1 ? '1610701596007-11502861dcfa' : item === 2 ? '1589365278144-830140d33d57' : item === 3 ? '1576013551627-0cc20b96c2a7' : '1583847268964-b28dc8f51f92'}?auto=format&fit=crop&w=400&q=80`}
+                      alt="Product"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-3 right-3">
@@ -154,27 +154,27 @@ const EcommerceDesign9 = () => {
         {/* Artisan Story */}
         <section className="py-24 px-8 md:px-16">
           <div className="bg-[#2C2C2C] rounded-3xl p-8 md:p-16 text-white relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D97757] rounded-full blur-[100px] opacity-20 translate-x-1/2 -translate-y-1/2"></div>
-             
-             <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-               <div>
-                 <h2 className="text-4xl font-serif mb-6">Meet the Maker</h2>
-                 <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                   "I believe that the objects we use every day should bring joy and beauty to our lives. Each piece I create is a reflection of the natural world that surrounds my studio."
-                 </p>
-                 <div className="flex items-center gap-4">
-                   <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Artist" className="w-12 h-12 rounded-full object-cover border-2 border-[#D97757]" />
-                   <div>
-                     <h4 className="font-bold">Sarah Jenkins</h4>
-                     <p className="text-sm text-gray-400">Ceramist, Portland OR</p>
-                   </div>
-                 </div>
-               </div>
-               <div className="grid grid-cols-2 gap-4">
-                 <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80" className="rounded-xl transform translate-y-8" alt="Studio" />
-                 <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=400&q=80" className="rounded-xl" alt="Work" />
-               </div>
-             </div>
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D97757] rounded-full blur-[100px] opacity-20 translate-x-1/2 -translate-y-1/2"></div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+              <div>
+                <h2 className="text-4xl font-serif mb-6">Meet the Maker</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                  "I believe that the objects we use every day should bring joy and beauty to our lives. Each piece I create is a reflection of the natural world that surrounds my studio."
+                </p>
+                <div className="flex items-center gap-4">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Artist" className="w-12 h-12 rounded-full object-cover border-2 border-[#D97757]" />
+                  <div>
+                    <h4 className="font-bold">Sarah Jenkins</h4>
+                    <p className="text-sm text-gray-400">Ceramist, Portland OR</p>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80" className="rounded-xl transform translate-y-8" alt="Studio" />
+                <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=400&q=80" className="rounded-xl" alt="Work" />
+              </div>
+            </div>
           </div>
         </section>
       </div>

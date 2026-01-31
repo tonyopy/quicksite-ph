@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft } from 'lucide-react';
 
 function TermsOfService({ onBack }) {
@@ -14,7 +15,7 @@ function TermsOfService({ onBack }) {
         <link rel="canonical" href="https://quicksiteph.com/" />
       </Helmet>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <button 
+        <button
           onClick={onBack}
           className="flex items-center text-blue-600 hover:text-blue-800 font-medium mb-8 transition-colors"
         >
@@ -24,10 +25,10 @@ function TermsOfService({ onBack }) {
 
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          
+
           <div className="prose prose-blue max-w-none text-gray-600">
             <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
-            
+
             <h2 className="text-xl font-bold text-gray-800 mt-8 mb-4">1. Acceptance of the Terms of Service</h2>
             <p className="mb-4">
               These terms of service are entered into by and between You and QuickSite PH ("Company," "we," or "us"). The following terms and conditions govern your access to and use of QuickSitePH.com, including any content, functionality, and services offered on or through QuickSitePH.com.

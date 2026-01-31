@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShoppingCart, Menu, Zap, Monitor, Smartphone, Headphones, Watch, Filter, ChevronDown, Star } from 'lucide-react';
+import { Search, ShoppingCart, Menu, Zap, Monitor, Smartphone, Headphones, Watch, Filter, ChevronDown, Star, ChevronRight } from 'lucide-react';
 
 const EcommerceDesign8 = () => {
   return (
@@ -22,9 +22,9 @@ const EcommerceDesign8 = () => {
 
             <div className="flex-1 max-w-xl mx-8 hidden md:block">
               <div className="relative">
-                <input 
-                  type="text" 
-                  placeholder="Search for products..." 
+                <input
+                  type="text"
+                  placeholder="Search for products..."
                   className="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 pl-4 pr-10 text-gray-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 />
                 <Search className="absolute right-3 top-2.5 w-5 h-5 text-gray-400" />
@@ -72,7 +72,7 @@ const EcommerceDesign8 = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
             <div className="relative z-10 p-10 h-full flex flex-col justify-center items-start">
               <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">PREMIUM</span>
-              <h1 className="text-5xl font-bold mb-4 text-white leading-tight">Next Gen <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Virtual Reality</span></h1>
+              <h1 className="text-5xl font-bold mb-4 text-white leading-tight">Next Gen <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Virtual Reality</span></h1>
               <p className="text-gray-300 mb-8 max-w-md">Immerse yourself in new worlds with the latest VR technology. Ultra-low latency and 8K resolution.</p>
               <button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold transition-all transform hover:scale-105">
                 Shop Now
@@ -86,7 +86,7 @@ const EcommerceDesign8 = () => {
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-2">Pro Gaming</h3>
                 <p className="text-sm text-gray-400 mb-4">Peripherals for champions</p>
-                <a href="#" className="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">View Collection <ChevronRight size={14}/></a>
+                <a href="#" className="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">View Collection <ChevronRight size={14} /></a>
               </div>
               <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80" className="absolute right-0 bottom-0 w-32 md:w-40 opacity-80 group-hover:scale-110 transition-transform" alt="Gaming" />
             </div>
@@ -94,7 +94,7 @@ const EcommerceDesign8 = () => {
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-2">Smart Home</h3>
                 <p className="text-sm text-gray-400 mb-4">Automate your life</p>
-                <a href="#" className="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">View Collection <ChevronRight size={14}/></a>
+                <a href="#" className="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">View Collection <ChevronRight size={14} /></a>
               </div>
               <img src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?auto=format&fit=crop&w=500&q=80" className="absolute right-0 bottom-0 w-32 md:w-40 opacity-80 group-hover:scale-110 transition-transform" alt="Smart Home" />
             </div>
@@ -116,19 +116,19 @@ const EcommerceDesign8 = () => {
             <div key={item} className="bg-gray-800 rounded-xl p-4 border border-gray-700 hover:border-blue-500/50 transition-all group">
               <div className="relative bg-gray-700/50 rounded-lg p-4 mb-4 aspect-square flex items-center justify-center">
                 <span className="absolute top-2 left-2 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded">IN STOCK</span>
-                <img 
+                <img
                   src={`https://images.unsplash.com/photo-${item % 4 === 0 ? '1505740420928-5e560c06d30e' : item % 4 === 1 ? '1572569028738-411a500bd43f' : item % 4 === 2 ? '1546868871-7041f2a55e12' : '1526170375885-4d8ecf77b99f'}?auto=format&fit=crop&w=400&q=80`}
-                  alt="Product" 
+                  alt="Product"
                   className="max-h-full max-w-full object-contain mix-blend-normal group-hover:scale-110 transition-transform duration-300"
                 />
                 <button className="absolute bottom-2 right-2 bg-blue-600 text-white p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-700">
                   <ShoppingCart size={18} />
                 </button>
               </div>
-              
+
               <div className="space-y-2">
                 <div className="flex gap-1">
-                  {[1,2,3,4,5].map(s => <Star key={s} size={12} className="text-yellow-500 fill-current" />)}
+                  {[1, 2, 3, 4, 5].map(s => <Star key={s} size={12} className="text-yellow-500 fill-current" />)}
                   <span className="text-xs text-gray-500 ml-1">(42)</span>
                 </div>
                 <h3 className="font-semibold text-lg leading-tight truncate">Ultra HD Wireless Headphones Noise Cancelling</h3>
@@ -178,7 +178,7 @@ const EcommerceDesign8 = () => {
 
 // Missing icon component for the banner
 const Shield = ({ className }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
 );
 
 export default EcommerceDesign8;

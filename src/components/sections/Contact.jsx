@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, CreditCard, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Linkedin, CreditCard, CheckCircle } from 'lucide-react';
 import Reveal from '../ui/Reveal';
 import { LogoWhite } from '../ui/Logo';
 
@@ -21,14 +21,20 @@ function Contact({ setCurrentPage }) {
         };
 
         try {
-            // Replace 'https://hook.us1.make.com/...' with your new Webhook URL if you created a new scenario
-            await fetch('https://hook.eu1.make.com/ui12v2h6btgjjxca9m9c9lifbpu3qkd7', {
+            // Call Resend API endpoint — sends client confirmation + owner notification
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit form');
+            }
+
             setFormStatus('success');
         } catch (error) {
+            console.error('Form submission error:', error);
             setFormStatus('error');
         }
     };
@@ -52,7 +58,8 @@ function Contact({ setCurrentPage }) {
                                                 <CheckCircle className="w-10 h-10 text-green-600" />
                                             </div>
                                             <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                                            <p className="text-gray-600">We'll get back to you within 24 hours.</p>
+                                            <p className="text-gray-600 mb-2">We'll get back to you within 24 hours.</p>
+                                            <p className="text-sm text-gray-500">Check your email for a confirmation message.</p>
                                             <button onClick={() => setFormStatus('idle')} className="mt-8 text-blue-600 font-bold hover:underline">Send another message</button>
                                         </div>
                                     ) : (
@@ -75,7 +82,7 @@ function Contact({ setCurrentPage }) {
                                                 </div>
                                                 <div>
                                                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number (WhatsApp/Viber)</label>
-                                                    <input type="tel" id="phone" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" placeholder="0917 123 4567" />
+                                                    <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" placeholder="0917 123 4567" />
                                                 </div>
                                             </div>
 
@@ -109,9 +116,7 @@ function Contact({ setCurrentPage }) {
                             <p className="mt-4 text-gray-400 max-w-sm text-sm">Helping Filipino businesses grow with automated, professional websites.</p>
                             <div className="mt-6 flex gap-4">
                                 <a href="https://www.facebook.com/profile.php?id=61574823853351" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Facebook className="h-5 w-5" /></a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram className="h-5 w-5" /></a>
                                 <a href="https://www.linkedin.com/in/mark-anthony-dagon-41b478213/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Linkedin className="h-5 w-5" /></a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors"><Youtube className="h-5 w-5" /></a>
                             </div>
                         </div>
 
@@ -123,7 +128,6 @@ function Contact({ setCurrentPage }) {
                                 <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
                                 <li><a href="#templates" className="hover:text-white transition-colors">Template Gallery</a></li>
                                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-                                <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
                             </ul>
                         </div>
 

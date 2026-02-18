@@ -9,6 +9,7 @@ import TemplatesGallery from './TemplatesGallery';
 
 // Import UI Components
 import Navbar from './components/sections/Navbar';
+import MessengerButton from './components/ui/MessengerButton';
 
 // Import Sections
 import Hero from './components/sections/Hero';
@@ -52,19 +53,39 @@ function App() {
 
   // Render sub-pages
   if (currentPage === 'privacy') {
-    return <PrivacyPolicy onBack={() => window.location.hash = ''} />;
+    return (
+      <>
+        <PrivacyPolicy onBack={() => window.location.hash = ''} />
+        <MessengerButton />
+      </>
+    );
   }
 
   if (currentPage === 'terms') {
-    return <TermsOfService onBack={() => window.location.hash = ''} />;
+    return (
+      <>
+        <TermsOfService onBack={() => window.location.hash = ''} />
+        <MessengerButton />
+      </>
+    );
   }
 
   if (currentPage === 'about') {
-    return <About onBack={() => window.location.hash = ''} />;
+    return (
+      <>
+        <About onBack={() => window.location.hash = ''} />
+        <MessengerButton />
+      </>
+    );
   }
 
   if (currentPage === 'templates') {
-    return <TemplatesGallery onBack={() => window.location.hash = ''} />;
+    return (
+      <>
+        <TemplatesGallery onBack={() => window.location.hash = ''} />
+        <MessengerButton />
+      </>
+    );
   }
 
   return (
@@ -90,6 +111,9 @@ function App() {
         <FAQ />
         <Contact setCurrentPage={setCurrentPage} />
       </main>
+
+      {/* Messenger floating button — visible on all pages */}
+      <MessengerButton />
     </div>
   );
 }

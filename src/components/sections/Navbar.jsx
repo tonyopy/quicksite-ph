@@ -28,9 +28,9 @@ function Navbar({ toggleMenu, isMenuOpen }) {
             {isMenuOpen && (
                 <div className="md:hidden bg-white border-t border-gray-100">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        <a href="#services" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
+                        <a href="#services" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium" onClick={toggleMenu}>Services</a>
                         <a href="#templates" className="block w-full text-left text-gray-600 hover:text-blue-600 px-3 py-2 font-medium" onClick={toggleMenu}>Templates</a>
-                        <a href="#pricing" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Pricing</a>
+                        <a href="#pricing" className="block text-gray-600 hover:text-blue-600 px-3 py-2 font-medium" onClick={toggleMenu}>Pricing</a>
                         <a href="#contact" className="block bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 font-medium text-center" onClick={toggleMenu}>Get Started</a>
                     </div>
                 </div>

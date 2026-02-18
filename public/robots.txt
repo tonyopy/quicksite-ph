@@ -1,3 +1,6 @@
+# robots.txt for quicksiteph.com
 User-agent: *
 Allow: /
+Disallow: /api/
+
 Sitemap: https://quicksiteph.com/sitemap.xml

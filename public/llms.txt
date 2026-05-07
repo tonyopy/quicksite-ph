@@ -1,0 +1,89 @@
+# QuickSite PH
+
+> QuickSite PH is a Philippine-based web design and business automation agency that builds professional, automated websites for Filipino businesses across all cities in the Philippines. Websites start at ₱5,999 / $107 one-time setup fee.
+
+QuickSite PH specializes in "Digital Employees" — websites that work 24/7 to capture leads, book appointments, process orders, and handle customer inquiries automatically, without the business owner needing to be online.
+
+## Services
+
+- **Automated Business Websites** — Professional websites with smart automation for any industry, starting at ₱5,999
+- **Online Booking Systems** — For dental clinics, salons, spas, tutorial centers, and any appointment-based business
+- **E-Commerce with GCash Integration** — Online stores with Philippine payment methods (GCash, bank transfer)
+- **Condo & Real Estate Rental Websites** — Property listings with online booking and inquiry management
+- **Restaurant Online Ordering Systems** — Digital menu, online orders, and delivery management
+- **Tutorial Center & School Websites** — Enrollment, scheduling, and student management portals
+- **Service Business Websites** — For freelancers, coaches, consultants, and professionals
+
+## Pricing
+
+- **Setup Fee:** Starting at ₱5,999 (one-time, includes design, development, and launch)
+- **Monthly Operations:** ₱1,000/month (covers hosting, SSL security, automation credits, 24/7 monitoring)
+- **Payment Plans:** 50% upfront, 50% upon launch available for setup fee
+- **Payment Methods (PHP):** GCash, Bank Transfer
+- **Payment Methods (USD):** PayPal
+
+## Who QuickSite PH Serves
+
+QuickSite PH specializes in helping Filipino small and medium enterprises (SMEs) including:
+- Dental clinics and medical practices
+- Salons, barbershops, and beauty businesses
+- Condo owners and property rental businesses
+- Tutorial centers and learning institutions
+- Restaurants, cafes, and food businesses
+- Real estate agents and brokers
+- Freelancers, coaches, and consultants
+- Any Filipino business that wants to automate customer interactions
+
+## Service Coverage (All Philippines)
+
+QuickSite PH serves businesses across all cities and municipalities in the Philippines, including:
+Metro Manila (Makati, BGC/Taguig, Quezon City, Pasig, Mandaluyong, Marikina, Pasay, Paranaque, Las Pinas, Muntinlupa, Caloocan, Malabon, Navotas, Valenzuela), Cebu City, Davao City, Cagayan de Oro, Iloilo City, Bacolod, Zamboanga City, General Santos, Antipolo, Bacoor, Imus, Dasmarinas, San Jose del Monte, Malolos, Batangas City, Lipa City, Lucena City, Legazpi City, Naga City, Puerto Princesa, Tagaytay, Baguio City, and all other Philippine cities and municipalities.
+
+## Key Features
+
+- Mobile-responsive design (works on all devices)
+- GCash payment integration
+- Automated appointment booking and reminders
+- Lead capture and auto-reply systems
+- 24/7 monitoring and uptime guarantee
+- SSL security included
+- Domain registration included
+- No long-term contracts (cancel with 30 days notice)
+- 30-minute owner training included upon launch
+- Money-back guarantee
+
+## Frequently Asked Questions
+
+**Q: What does the ₱1,000/month Business Autopilot fee cover?**
+A: It covers high-speed hosting, SSL security, automation credits that power auto-replies and booking systems, and 24/7 system monitoring to keep the website running.
+
+**Q: Do I need technical knowledge to use QuickSite PH?**
+A: No. QuickSite PH handles all technical setup. Owners receive 30-minute training upon launch and can manage their site without any coding knowledge.
+
+**Q: How long does it take to build a website?**
+A: Most websites are completed in 1-2 weeks from the discovery call. Rush service is available for an additional fee.
+
+**Q: Can I cancel anytime?**
+A: Yes. There is no long-term contract. Cancel with 30 days notice.
+
+**Q: Is domain and hosting included?**
+A: Yes. Domain registration, high-speed hosting, and enterprise-grade SSL security are all included in the monthly operations fee.
+
+**Q: What payment methods are accepted?**
+A: For PHP payments: GCash and Bank Transfer. For USD payments: PayPal only.
+
+**Q: Does QuickSite PH serve businesses outside Metro Manila?**
+A: Yes. QuickSite PH serves all cities and municipalities across the Philippines. Everything is done remotely online.
+
+**Q: How much does an automated website cost in the Philippines?**
+A: QuickSite PH websites start at ₱5,999 one-time setup fee plus ₱1,000/month for hosting and automation. This is among the most affordable professional web automation packages in the Philippines.
+
+## Contact & Links
+
+- Website: https://quicksiteph.com
+- Facebook: https://www.facebook.com/profile.php?id=61574823853351
+- Free Quote: https://quicksiteph.com/#contact
+
+## About
+
+QuickSite PH was built to help Filipino entrepreneurs and small business owners compete online with professional, automated web solutions at prices affordable for Philippine SMEs. The company believes every Filipino business deserves a website that works as hard as its owner.

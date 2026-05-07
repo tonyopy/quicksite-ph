@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Linkedin, CreditCard, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Linkedin, CreditCard, CheckCircle, ArrowRight } from 'lucide-react';
 import Reveal from '../ui/Reveal';
 import { LogoWhite } from '../ui/Logo';
 
@@ -46,7 +46,12 @@ function Contact({ setCurrentPage }) {
                     <div className="max-w-3xl mx-auto">
                         <Reveal className="text-center mb-12">
                             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Ready to Automate Your Business?</h2>
-                            <p className="mt-4 text-lg text-gray-500">Fill out the form below to get started. We accept GCash for the initial deposit.</p>
+                            <p className="mt-4 text-lg text-gray-500">Tell us about your business and we'll send you a free mockup within 48 hours.</p>
+                            {/* Social proof near form */}
+                            <div className="mt-4 inline-flex items-center gap-2 text-sm text-gray-500">
+                                <CheckCircle className="w-4 h-4 text-green-500" />
+                                <span>Join 15+ businesses already using QuickSite PH</span>
+                            </div>
                         </Reveal>
 
                         <Reveal className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
@@ -61,6 +66,18 @@ function Contact({ setCurrentPage }) {
                                             <p className="text-gray-600 mb-2">We'll get back to you within 24 hours.</p>
                                             <p className="text-sm text-gray-500">Check your email for a confirmation message.</p>
                                             <button onClick={() => setFormStatus('idle')} className="mt-8 text-blue-600 font-bold hover:underline">Send another message</button>
+                                        </div>
+                                    ) : formStatus === 'error' ? (
+                                        <div className="text-center py-12">
+                                            <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                                <Mail className="w-10 h-10 text-red-600" />
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h3>
+                                            <p className="text-gray-600 mb-4">Don't worry — you can reach us directly on Messenger instead.</p>
+                                            <a href="https://m.me/61574823853351" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                                                <Facebook className="w-4 h-4" /> Message Us on Facebook
+                                            </a>
+                                            <button onClick={() => setFormStatus('idle')} className="block mx-auto mt-4 text-blue-600 font-bold hover:underline text-sm">Or try the form again</button>
                                         </div>
                                     ) : (
                                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -96,9 +113,21 @@ function Contact({ setCurrentPage }) {
                                                 <textarea id="message" rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none" placeholder="Tell us about your business goals..."></textarea>
                                             </div>
 
-                                            <button type="submit" disabled={formStatus === 'submitting'} className="w-full bg-orange-500 text-white font-bold py-4 rounded-lg hover:bg-orange-600 transition-colors shadow-md text-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center">
-                                                {formStatus === 'submitting' ? 'Sending...' : 'Submit Inquiry'}
+                                            <button type="submit" disabled={formStatus === 'submitting'} className="w-full bg-orange-500 text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20 text-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center hover:scale-[1.02]">
+                                                {formStatus === 'submitting' ? 'Sending...' : (
+                                                    <>
+                                                        Start My Website
+                                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                                    </>
+                                                )}
                                             </button>
+
+                                            {/* Trust signals under button */}
+                                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-gray-400 pt-2">
+                                                <span className="flex items-center gap-1">🔒 Your info is safe — we never share data</span>
+                                                <span className="hidden sm:block">·</span>
+                                                <span className="flex items-center gap-1">⚡ We respond within 2-4 hours</span>
+                                            </div>
                                         </form>
                                     )}
                                 </div>

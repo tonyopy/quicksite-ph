@@ -3,4 +3,52 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
+# === AI Search Engine Crawlers — Explicitly Allowed ===
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Apple AI
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# You.com AI
+User-agent: YouBot
+Allow: /
+
+# Bing / Microsoft Copilot
+User-agent: bingbot
+Allow: /
+
+# Sitemap
 Sitemap: https://quicksiteph.com/sitemap.xml

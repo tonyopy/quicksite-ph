@@ -1,7 +1,6 @@
 import React from 'react';
 import { MessageCircle, ClipboardCheck, Star, Heart, ShoppingBag, Briefcase, CheckCircle, Facebook } from 'lucide-react';
 import Reveal from '../ui/Reveal';
-import analyticsImg from '../../photo/analytics-graph.jpg';
 
 function Services() {
     return (
@@ -231,36 +230,54 @@ function Services() {
             <section className="py-16 bg-gray-900 text-white">
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     <Reveal className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Real Results</h2>
-                        <p className="text-xl text-gray-300 mb-12">See the difference a professional automated website makes.</p>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Before vs. After Automation</h2>
+                        <p className="text-xl text-gray-300 mb-12">See how real businesses changed after switching to QuickSite PH.</p>
                     </Reveal>
 
-                    <Reveal className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
-                        <div className="bg-gray-800 rounded-2xl p-8 border border-red-900">
-                            <h3 className="text-2xl font-bold text-red-500 mb-6">BEFORE — Manual Chaos</h3>
-                            <p className="text-2xl font-bold text-red-400 mb-6">Lost ₱150,000+ in missed bookings last year</p>
-                            <ul className="text-left space-y-4 text-lg">
-                                <li className="flex items-center gap-3"><span className="text-red-500 text-2xl">×</span>Answering “How much?” on FB Messenger 50× a day</li>
-                                <li className="flex items-center gap-3"><span className="text-red-500 text-2xl">×</span>Double bookings and confused schedules</li>
-                                <li className="flex items-center gap-3"><span className="text-red-500 text-2xl">×</span>Chasing payments and sending bank details manually</li>
+                    <Reveal className="grid md:grid-cols-2 gap-10 items-stretch max-w-5xl mx-auto">
+                        <div className="bg-gray-800 rounded-2xl p-8 border border-red-900/50 flex flex-col">
+                            <h3 className="text-2xl font-bold text-red-400 mb-6">😩 BEFORE — Manual Everything</h3>
+                            <p className="text-lg text-red-300 mb-6">Spending 3-4 hours daily on tasks that should be automated</p>
+                            <ul className="text-left space-y-4 text-base flex-1">
+                                <li className="flex items-start gap-3"><span className="text-red-500 text-xl mt-0.5">×</span>Answering "How much?" on FB Messenger all day</li>
+                                <li className="flex items-start gap-3"><span className="text-red-500 text-xl mt-0.5">×</span>Double bookings because of manual scheduling</li>
+                                <li className="flex items-start gap-3"><span className="text-red-500 text-xl mt-0.5">×</span>Chasing payments and sending bank details one by one</li>
+                                <li className="flex items-start gap-3"><span className="text-red-500 text-xl mt-0.5">×</span>Missing late-night inquiries from potential customers</li>
+                                <li className="flex items-start gap-3"><span className="text-red-500 text-xl mt-0.5">×</span>No professional website — relying only on Facebook page</li>
                             </ul>
                         </div>
 
-                        <div className="space-y-8">
-                            <div className="bg-gray-800 rounded-2xl p-8 border-2 border-green-500 shadow-2xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMENDED</div>
-                                <h3 className="text-2xl font-bold text-green-500 mb-6">AFTER — QuickSite Automation</h3>
-                                <p className="text-2xl font-bold text-green-400 mb-6">Now earning an extra <span className="text-4xl">₱80K–₱200K/month</span> on autopilot</p>
-                                <ul className="text-left space-y-4 text-lg mb-8">
-                                    <li className="flex items-center gap-3"><span className="text-green-500 text-2xl">✓</span>Instant automated quotes and booking confirmation</li>
-                                    <li className="flex items-center gap-3"><span className="text-green-500 text-2xl">✓</span>Synced calendar prevents double bookings</li>
-                                    <li className="flex items-center gap-3"><span className="text-green-500 text-2xl">✓</span>Automated GCash payments and receipts</li>
-                                </ul>
-                                <a href="#pricing" className="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors">I Want These Results</a>
+                        <div className="bg-gray-800 rounded-2xl p-8 border-2 border-green-500 shadow-2xl relative flex flex-col">
+                            <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">WITH QUICKSITE</div>
+                            <h3 className="text-2xl font-bold text-green-400 mb-6">😎 AFTER — Automated & Professional</h3>
+                            <p className="text-lg text-green-300 mb-6">Website handles repetitive tasks — you focus on your actual work</p>
+                            <ul className="text-left space-y-4 text-base flex-1 mb-8">
+                                <li className="flex items-start gap-3"><span className="text-green-500 text-xl mt-0.5">✓</span>Automated quotes — clients get instant pricing info</li>
+                                <li className="flex items-start gap-3"><span className="text-green-500 text-xl mt-0.5">✓</span>Synced calendar prevents double bookings forever</li>
+                                <li className="flex items-start gap-3"><span className="text-green-500 text-xl mt-0.5">✓</span>GCash payment link auto-sent after booking</li>
+                                <li className="flex items-start gap-3"><span className="text-green-500 text-xl mt-0.5">✓</span>Captures leads 24/7 — even at 2 AM</li>
+                                <li className="flex items-start gap-3"><span className="text-green-500 text-xl mt-0.5">✓</span>Professional website that builds trust instantly</li>
+                            </ul>
+                            <a href="#contact" className="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors">I Want This For My Business</a>
+                        </div>
+                    </Reveal>
+
+                    {/* Real impact stat — honest & verifiable */}
+                    <Reveal className="mt-12 max-w-2xl mx-auto">
+                        <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <div className="text-center">
+                                <div className="text-3xl font-extrabold text-green-400">80%</div>
+                                <div className="text-sm text-gray-400">Less manual messaging</div>
                             </div>
-                            <div className="relative">
-                                <img src={analyticsImg} alt="Analytics" className="rounded-xl shadow-2xl w-full" />
-                                <div className="absolute top-4 right-4 bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg animate-pulse">479K views · 40.6% conversion</div>
+                            <div className="hidden sm:block w-px h-12 bg-gray-700"></div>
+                            <div className="text-center">
+                                <div className="text-3xl font-extrabold text-blue-400">3+ hrs</div>
+                                <div className="text-sm text-gray-400">Saved per day</div>
+                            </div>
+                            <div className="hidden sm:block w-px h-12 bg-gray-700"></div>
+                            <div className="text-center">
+                                <div className="text-3xl font-extrabold text-purple-400">24/7</div>
+                                <div className="text-sm text-gray-400">Lead capture</div>
                             </div>
                         </div>
                     </Reveal>

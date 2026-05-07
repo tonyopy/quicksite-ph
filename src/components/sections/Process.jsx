@@ -3,6 +3,16 @@ import { MessageCircle, Wrench, Rocket, ArrowRight, Globe, CreditCard, ShieldChe
 import Reveal from '../ui/Reveal';
 
 function Process() {
+    // Color lookup map — Tailwind can't generate dynamic class names at build time
+    const colorMap = {
+        blue:   { bg: 'bg-blue-100',   text: 'text-blue-600' },
+        green:  { bg: 'bg-green-100',  text: 'text-green-600' },
+        purple: { bg: 'bg-purple-100', text: 'text-purple-600' },
+        indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600' },
+        pink:   { bg: 'bg-pink-100',   text: 'text-pink-600' },
+        orange: { bg: 'bg-orange-100', text: 'text-orange-600' },
+    };
+
     return (
         <>
             {/* Process / How It Works */}
@@ -87,7 +97,7 @@ function Process() {
                         ].map((item, i) => (
                             <Reveal key={i}>
                                 <div className="flex flex-col items-center text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow bg-gray-50 h-full">
-                                    <div className={`w-14 h-14 rounded-full bg-${item.color}-100 flex items-center justify-center text-${item.color}-600 mb-4`}>
+                                    <div className={`w-14 h-14 rounded-full ${colorMap[item.color].bg} flex items-center justify-center ${colorMap[item.color].text} mb-4`}>
                                         <item.icon className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>

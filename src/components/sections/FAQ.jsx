@@ -20,7 +20,12 @@ function FAQ() {
     ];
 
     return (
-        <section className="py-20 bg-gray-50">
+        <section
+            id="faq"
+            className="py-20 bg-gray-50"
+            itemScope
+            itemType="https://schema.org/FAQPage"
+        >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <Reveal className="text-center mb-16">
                     <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -30,22 +35,32 @@ function FAQ() {
 
                 <Reveal className="max-w-3xl mx-auto space-y-4">
                     {faqData.map((item, i) => (
-                        <div key={i} className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div
+                            key={i}
+                            className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                            itemScope
+                            itemProp="mainEntity"
+                            itemType="https://schema.org/Question"
+                        >
                             <button
                                 onClick={() => toggleFaq(i)}
                                 className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+                                aria-expanded={openFaqIndex === i}
                             >
-                                <span className="font-bold text-gray-900">{item.q}</span>
+                                <span className="font-bold text-gray-900" itemProp="name">{item.q}</span>
                                 {openFaqIndex === i ? (
-                                    <ChevronUp className="w-5 h-5 text-blue-500" />
+                                    <ChevronUp className="w-5 h-5 text-blue-500 flex-shrink-0" />
                                 ) : (
-                                    <ChevronDown className="w-5 h-5 text-gray-400" />
+                                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                                 )}
                             </button>
                             <div
                                 className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === i ? 'max-h-48 py-4 border-t border-gray-100 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
+                                itemScope
+                                itemProp="acceptedAnswer"
+                                itemType="https://schema.org/Answer"
                             >
-                                <p className="text-gray-600">{item.a}</p>
+                                <p className="text-gray-600" itemProp="text">{item.a}</p>
                             </div>
                         </div>
                     ))}

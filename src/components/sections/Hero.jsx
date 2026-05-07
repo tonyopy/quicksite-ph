@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap } from 'lucide-react';
 import Reveal from '../ui/Reveal';
 import AutomationDemo from './AutomationDemo';
 
@@ -28,16 +28,26 @@ function Hero() {
                     <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-600 mb-10 leading-relaxed">
                         Get a professional website + smart automation that captures leads, books appointments, and handles tasks while you sleep. <span className="text-gray-900 font-semibold">Starting at ₱5,999 / $107.</span>
                     </p>
+
+                    {/* CTAs — Stronger, more specific */}
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/20 transition-all hover:scale-105 hover:-translate-y-1">
-                            Get Your Free Quote
+                            Get My Free Website Mockup
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </a>
-                        <a href="#process" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm transition-all hover:scale-105 hover:-translate-y-1">
-                            See How It Works
+                        <a href="#templates" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 shadow-sm transition-all hover:scale-105 hover:-translate-y-1">
+                            See Live Examples
                         </a>
                     </div>
-                    <div className="mt-12 flex flex-wrap justify-center gap-y-4 gap-x-8 text-sm font-medium text-gray-500 mb-16">
+
+                    {/* Urgency line */}
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm text-orange-600 font-semibold">
+                        <Zap className="w-4 h-4" />
+                        <span>Only 5 slots left for May 2026</span>
+                    </div>
+
+                    {/* Trust badges */}
+                    <div className="mt-10 flex flex-wrap justify-center gap-y-4 gap-x-8 text-sm font-medium text-gray-500 mb-16">
                         <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
                             <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                             <span>Money-back Guarantee</span>
@@ -51,9 +61,22 @@ function Hero() {
                             <span>Mobile Optimized</span>
                         </div>
                     </div>
+
+                    {/* Social Proof Bar — NEW */}
+                    <div className="mt-2 mb-12 flex flex-col items-center gap-3">
+                        <div className="flex items-center gap-1">
+                            {[1,2,3,4,5].map(i => (
+                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                            ))}
+                            <span className="ml-2 text-sm font-bold text-gray-700">4.9/5</span>
+                        </div>
+                        <p className="text-sm text-gray-500">
+                            Trusted by businesses across <span className="font-semibold text-gray-700">Manila, Cebu, Davao</span> & more
+                        </p>
+                    </div>
                 </Reveal>
 
-                <Reveal className="relative mt-12 max-w-5xl mx-auto">
+                <Reveal className="relative mt-4 max-w-5xl mx-auto">
                     <AutomationDemo />
                 </Reveal>
             </div>

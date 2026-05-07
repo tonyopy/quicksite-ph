@@ -1,76 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage — highest priority -->
+  <!-- Homepage — only real crawlable URL for this SPA -->
   <url>
     <loc>https://quicksiteph.com/</loc>
-    <lastmod>2026-02-18</lastmod>
+    <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- About page -->
-  <url>
-    <loc>https://quicksiteph.com/#about</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Services section -->
-  <url>
-    <loc>https://quicksiteph.com/#services</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Pricing section -->
-  <url>
-    <loc>https://quicksiteph.com/#pricing</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Template Gallery -->
-  <url>
-    <loc>https://quicksiteph.com/#templates</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Testimonials section -->
-  <url>
-    <loc>https://quicksiteph.com/#testimonials</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contact section -->
-  <url>
-    <loc>https://quicksiteph.com/#contact</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Privacy Policy -->
-  <url>
-    <loc>https://quicksiteph.com/#privacy</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Terms of Service -->
-  <url>
-    <loc>https://quicksiteph.com/#terms</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 
 </urlset>

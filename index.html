@@ -5,15 +5,18 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QuickSite PH | Automated Websites & Booking Systems for Filipino Businesses</title>
+  <title>QuickSite PH | Automated Websites &amp; Booking Systems for Filipino Businesses</title>
   <meta name="description"
-    content="Boost your business with QuickSite PH. We build automated websites for dental clinics, condo rentals, salons, and more. Starts at ₱5,999. Get a free quote!">
+    content="Boost your business with QuickSite PH. We build automated websites for dental clinics, condo rentals, salons, restaurants, and more across all cities in the Philippines. Starts at ₱5,999. Get a free quote!">
   <meta name="keywords"
-    content="web design philippines, automated booking system, dental clinic website, condo rental website, salon booking system, restaurant online ordering, small business website builder, quicksite ph, affordable web design manila, ecommerce philippines, real estate website, online appointment scheduling, digital marketing for smes, seo friendly website">
+    content="web design philippines, automated booking system, dental clinic website, condo rental website, salon booking system, restaurant online ordering, small business website builder, quicksite ph, affordable web design manila, ecommerce philippines, real estate website, online appointment scheduling, digital marketing for smes, seo friendly website, gcash payment integration, automated website philippines, website builder philippines, web design cebu, web design davao, web design quezon city">
+  <meta name="author" content="QuickSite PH" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://quicksiteph.com/" />
 
   <!-- Google Search Console Verification -->
-  <!-- Replace content value with your actual verification code from Google Search Console -->
+  <!-- To verify: go to https://search.google.com/search-console → Add Property → HTML Tag method -->
+  <!-- Then replace YOUR_VERIFICATION_CODE_HERE with your actual code and uncomment the line below -->
   <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
 
   <!-- Google Analytics 4 -->
@@ -28,32 +31,251 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://quicksiteph.com/" />
-  <meta property="og:title" content="QuickSite PH - Professional Website Automation" />
+  <meta property="og:title" content="QuickSite PH — Automated Websites for Filipino Businesses" />
   <meta property="og:description"
-    content="Automate your business success with QuickSite PH. We build professional, automated websites for Filipino businesses." />
+    content="Professional automated websites for Filipino SMEs. Booking systems, GCash integration, 24/7 automation. Starts at ₱5,999. Serving all cities in the Philippines." />
   <meta property="og:image" content="https://quicksiteph.com/Icon-header.jpg" />
+  <meta property="og:locale" content="en_PH" />
+  <meta property="og:site_name" content="QuickSite PH" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://quicksiteph.com/" />
-  <meta property="twitter:title" content="QuickSite PH - Professional Website Automation" />
+  <meta property="twitter:title" content="QuickSite PH — Automated Websites for Filipino Businesses" />
   <meta property="twitter:description"
-    content="Automate your business success with QuickSite PH. We build professional, automated websites for Filipino businesses." />
+    content="Professional automated websites for Filipino SMEs. Booking systems, GCash integration, 24/7 automation. Starts at ₱5,999." />
   <meta property="twitter:image" content="https://quicksiteph.com/Icon-header.jpg" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- ============================================================ -->
+  <!-- Schema.org JSON-LD — Multi-Schema for SEO + AEO              -->
+  <!-- Covers: LocalBusiness, WebSite, FAQPage, Service             -->
+  <!-- FAQPage schema = primary signal for AI answer engines        -->
+  <!-- ============================================================ -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "QuickSite PH",
-      "url": "https://quicksiteph.com/",
-      "logo": "https://quicksiteph.com/logo.svg",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61574823853351"
-      ]
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://quicksiteph.com/#business",
+        "name": "QuickSite PH",
+        "alternateName": "QuickSitePH",
+        "url": "https://quicksiteph.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://quicksiteph.com/logo.svg",
+          "width": 200,
+          "height": 60
+        },
+        "image": "https://quicksiteph.com/Icon-header.jpg",
+        "description": "QuickSite PH builds automated, professional websites for Filipino businesses across all cities in the Philippines. Starting at ₱5,999 one-time setup. Services include online booking systems, GCash e-commerce, restaurant ordering, and 24/7 business automation.",
+        "priceRange": "₱₱",
+        "currenciesAccepted": "PHP, USD",
+        "paymentAccepted": "GCash, Bank Transfer, PayPal",
+        "areaServed": [
+          { "@type": "Country", "name": "Philippines" },
+          { "@type": "City", "name": "Metro Manila" },
+          { "@type": "City", "name": "Cebu City" },
+          { "@type": "City", "name": "Davao City" },
+          { "@type": "City", "name": "Quezon City" },
+          { "@type": "City", "name": "Makati" },
+          { "@type": "City", "name": "Taguig" },
+          { "@type": "City", "name": "Pasig" },
+          { "@type": "City", "name": "Mandaluyong" },
+          { "@type": "City", "name": "Iloilo City" },
+          { "@type": "City", "name": "Bacolod" },
+          { "@type": "City", "name": "Cagayan de Oro" },
+          { "@type": "City", "name": "Antipolo" },
+          { "@type": "City", "name": "Bacoor" },
+          { "@type": "City", "name": "Baguio City" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PH",
+          "addressRegion": "Philippines"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "url": "https://www.facebook.com/profile.php?id=61574823853351",
+          "availableLanguage": ["English", "Filipino"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+          }
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61574823853351"
+        ],
+        "knowsAbout": [
+          "Web Design Philippines",
+          "Website Automation",
+          "Online Booking Systems",
+          "E-Commerce GCash Integration",
+          "Dental Clinic Websites",
+          "Salon Booking Systems",
+          "Condo Rental Websites",
+          "Restaurant Online Ordering",
+          "Tutorial Center Management",
+          "Digital Marketing Philippines",
+          "SME Website Builder Philippines"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Design & Automation Services Philippines",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Automated Business Website",
+              "description": "Professional automated website with 24/7 lead capture, booking, and business automation for Filipino SMEs",
+              "price": "5999",
+              "priceCurrency": "PHP",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Monthly Operations & Hosting",
+              "description": "High-speed hosting, SSL security, automation credits, and 24/7 monitoring",
+              "price": "1000",
+              "priceCurrency": "PHP",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+
+      {
+        "@type": "WebSite",
+        "@id": "https://quicksiteph.com/#website",
+        "url": "https://quicksiteph.com/",
+        "name": "QuickSite PH",
+        "description": "Automated websites and booking systems for Filipino businesses — starting at ₱5,999",
+        "inLanguage": "en-PH",
+        "publisher": { "@id": "https://quicksiteph.com/#business" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://quicksiteph.com/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://quicksiteph.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost in the Philippines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "QuickSite PH builds automated websites for Filipino businesses starting at ₱5,999 one-time setup fee, plus ₱1,000 per month for hosting, SSL security, automation credits, and 24/7 monitoring. This is one of the most affordable professional web automation packages in the Philippines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the ₱1,000 monthly Business Autopilot fee cover?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The ₱1,000/month fee covers high-speed hosting, SSL security certificate, automation credits that power auto-replies and booking systems, and 24/7 system monitoring to ensure your website stays active and running."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need technical knowledge to use QuickSite PH?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No technical knowledge is required. QuickSite PH handles all the technical setup, development, and configuration. Business owners receive a 30-minute training session upon launch and can manage their site easily without any coding skills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I want changes to my website later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Minor updates and content changes are included free with the monthly plan. Major redesigns or new features have additional fees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I cancel my QuickSite PH plan anytime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, there is no long-term contract. You can cancel with 30 days notice. QuickSite PH recommends staying for at least 6 months to see the full business impact."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is domain and hosting included with QuickSite PH?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Domain registration, high-speed hosting, and enterprise-grade SSL security are all included as part of the monthly operations fee. QuickSite PH manages all the technical infrastructure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does QuickSite PH offer payment plans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. For the setup fee, you can pay 50% upfront and 50% upon website launch. Monthly fees are billed monthly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What payment methods does QuickSite PH accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For Philippine Peso (PHP) payments: GCash and Bank Transfer only. For US Dollar (USD) payments: PayPal only."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website with QuickSite PH?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most websites are completed in 1-2 weeks from the initial discovery call. Rush service is available for an additional fee."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does QuickSite PH serve businesses outside Metro Manila?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QuickSite PH serves businesses across all cities and municipalities in the Philippines including Cebu City, Davao City, Iloilo, Bacolod, Cagayan de Oro, Baguio, and all provincial areas. All work is done remotely online."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does QuickSite PH provide training after the website is built?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QuickSite PH includes comprehensive training on how to update your website content, manage bookings and orders, and use your automation tools. Training takes approximately 30 minutes and is included free."
+            }
+          }
+        ]
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://quicksiteph.com/#service-websites",
+        "name": "Automated Business Website",
+        "description": "Professional automated websites for Filipino SMEs with 24/7 booking, lead capture, and business automation",
+        "provider": { "@id": "https://quicksiteph.com/#business" },
+        "areaServed": { "@type": "Country", "name": "Philippines" },
+        "offers": {
+          "@type": "Offer",
+          "price": "5999",
+          "priceCurrency": "PHP"
+        },
+        "serviceType": "Web Design and Automation",
+        "termsOfService": "https://quicksiteph.com/#terms"
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link

@@ -9,8 +9,6 @@ import TemplatesGallery from './TemplatesGallery';
 
 // Import UI Components
 import Navbar from './components/sections/Navbar';
-import MessengerButton from './components/ui/MessengerButton';
-
 // Import Sections
 import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
@@ -56,7 +54,6 @@ function App() {
     return (
       <>
         <PrivacyPolicy onBack={() => window.location.hash = ''} />
-        <MessengerButton />
       </>
     );
   }
@@ -65,7 +62,6 @@ function App() {
     return (
       <>
         <TermsOfService onBack={() => window.location.hash = ''} />
-        <MessengerButton />
       </>
     );
   }
@@ -74,7 +70,6 @@ function App() {
     return (
       <>
         <About onBack={() => window.location.hash = ''} />
-        <MessengerButton />
       </>
     );
   }
@@ -83,7 +78,6 @@ function App() {
     return (
       <>
         <TemplatesGallery onBack={() => window.location.hash = ''} />
-        <MessengerButton />
       </>
     );
   }
@@ -112,8 +106,50 @@ function App() {
         <Contact setCurrentPage={setCurrentPage} />
       </main>
 
-      {/* Messenger floating button — visible on all pages */}
-      <MessengerButton />
+      {/* AEO: Machine-readable business summary for AI search engines & crawlers */}
+      {/* Visually hidden via sr-only — accessible to screen readers and crawlers */}
+      <aside className="sr-only" aria-label="About QuickSite PH">
+        <article>
+          <h2>QuickSite PH — Automated Website Agency for Filipino Businesses</h2>
+          <p>
+            QuickSite PH is a Philippine-based web design and automation agency that builds professional,
+            automated websites for Filipino small and medium enterprises (SMEs) across all cities in the Philippines.
+            Websites start at ₱5,999 one-time setup fee plus ₱1,000 per month for hosting and automation.
+          </p>
+          <section>
+            <h3>Services</h3>
+            <ul>
+              <li>Automated business websites starting at ₱5,999</li>
+              <li>Online booking systems for dental clinics, salons, and service businesses</li>
+              <li>E-commerce websites with GCash payment integration</li>
+              <li>Condo and real estate rental websites with online booking</li>
+              <li>Restaurant online ordering systems</li>
+              <li>Tutorial center and school management websites</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Service Coverage</h3>
+            <p>
+              QuickSite PH serves businesses in all cities and municipalities across the Philippines including
+              Metro Manila (Makati, BGC, Quezon City, Pasig, Taguig, Mandaluyong, Paranaque, Las Pinas,
+              Muntinlupa, Marikina, Caloocan, Valenzuela), Cebu City, Davao City, Iloilo City, Bacolod,
+              Cagayan de Oro, Zamboanga City, Baguio City, Antipolo, Bacoor, Imus, Dasmarinas, and all
+              other Philippine cities.
+            </p>
+          </section>
+          <section>
+            <h3>Pricing</h3>
+            <p>Setup fee starting at ₱5,999 (one-time). Monthly operations ₱1,000/month includes hosting, SSL, automation, and 24/7 monitoring.</p>
+            <p>Payment: GCash and Bank Transfer for PHP. PayPal for USD. Payment plans available (50% upfront, 50% on launch).</p>
+          </section>
+          <section>
+            <h3>Contact</h3>
+            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61574823853351">QuickSite PH on Facebook</a></p>
+            <p>Website: <a href="https://quicksiteph.com">https://quicksiteph.com</a></p>
+          </section>
+        </article>
+      </aside>
+
     </div>
   );
 }

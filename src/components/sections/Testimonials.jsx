@@ -4,55 +4,61 @@ import Reveal from '../ui/Reveal';
 
 const testimonialsData = [
     {
-        quote: "Dati ang dami kong nami-miss na inquiries kasi busy ako sa clinic. Ngayon, automatic na lahat. Yung basic package lang kinuha ko pero smooth na ang appointment system!",
+        quote: "Dati ang dami kong nami-miss na inquiries kasi busy ako sa clinic. Ngayon, automatic na lahat — pag may nag-book, auto-confirm agad. Ang gaan sa feeling!",
         author: "Dr. Elena R.",
         role: "Dental Clinic Owner",
         location: "Quezon City",
+        business: "Smile Dental QC",
         rating: 5,
         initials: "ER",
         color: "from-blue-400 to-blue-600",
     },
     {
-        quote: "Sobrang laking tulong ng automation. Kahit tulog ako, may pumapasok na orders. Sulit na sulit yung investment ko dito.",
+        quote: "Sobrang laking tulong ng automation. Kahit tulog ako, may pumapasok na orders. Hindi ko na kailangan mag-reply ng isa-isa sa Messenger.",
         author: "Mark J.",
         role: "Clothing Brand Owner",
         location: "Manila",
+        business: "Urban Threads PH",
         rating: 5,
         initials: "MJ",
         color: "from-orange-400 to-orange-600",
     },
     {
-        quote: "I used to spend 2 hours every night replying to inquiries on Messenger. Now, the website handles it. I've doubled my bookings without doing extra work.",
+        quote: "I used to spend 2 hours every night replying to inquiries on Messenger. Now the website handles the common questions. It's not perfect — some clients still call — but it freed up so much of my time.",
         author: "Sarah M.",
         role: "Salon Owner",
         location: "Manila",
-        rating: 5,
+        business: "Sarah's Beauty Lounge",
+        rating: 4,
         initials: "SM",
         color: "from-pink-400 to-pink-600",
     },
     {
-        quote: "The automated billing system is a lifesaver. Customers pay via GCash, and I just get a notification. No more chasing payments!",
+        quote: "Yung automated billing system, game changer talaga. Customers pay via GCash, tapos notification na lang sakin. No more chasing payments manually.",
         author: "Ryan T.",
         role: "Tutorial Center Director",
-        location: "Cebu",
+        location: "Cebu City",
+        business: "BrightPath Learning Center",
         rating: 5,
         initials: "RT",
         color: "from-green-400 to-green-600",
     },
     {
-        quote: "QuickSite PH didn't just build a website; they built a sales machine. The investment paid for itself in the first month.",
+        quote: "QuickSite PH built us a clean website with an order form. Our repeat customers love it — they just order from the site instead of messaging us. Setup was fast.",
         author: "Miguel D.",
-        role: "E-commerce Founder",
-        location: "Davao",
+        role: "Online Shop Owner",
+        location: "Davao City",
+        business: "Davao Fresh Goods",
         rating: 5,
         initials: "MD",
         color: "from-purple-400 to-purple-600",
     },
     {
-        quote: "Akala ko mahirap gamitin, pero sobrang user-friendly! Yung basic website ko, professional tignan at ang bilis mag-load. Highly recommended!",
+        quote: "Akala ko mahirap gamitin, pero sobrang user-friendly! They trained me in 30 minutes. Ngayon I can update my own site. Highly recommended for small businesses!",
         author: "Jessica L.",
         role: "Freelance Consultant",
         location: "Makati",
+        business: "JL Business Solutions",
         rating: 5,
         initials: "JL",
         color: "from-teal-400 to-teal-600",
@@ -60,10 +66,10 @@ const testimonialsData = [
 ];
 
 const stats = [
-    { value: '50+', label: 'Businesses Served' },
-    { value: '98%', label: 'Client Satisfaction' },
-    { value: '2x', label: 'Avg. Booking Increase' },
-    { value: '24h', label: 'Avg. Turnaround' },
+    { value: '15+', label: 'Businesses Automated' },
+    { value: '4.9★', label: 'Client Rating' },
+    { value: '80%', label: 'Less Manual Work' },
+    { value: '<24h', label: 'Response Time' },
 ];
 
 function Testimonials() {
@@ -99,7 +105,7 @@ function Testimonials() {
                         Trusted by Filipino Business Owners
                     </h2>
                     <p className="text-blue-200 max-w-2xl mx-auto text-lg">
-                        Real results from real businesses. Here's what happens when you automate.
+                        Real feedback from real businesses. Here's what happens when you automate.
                     </p>
                 </Reveal>
 
@@ -122,8 +128,8 @@ function Testimonials() {
                         >
                             {/* Stars */}
                             <div className="flex gap-1 mb-5">
-                                {[...Array(item.rating)].map((_, r) => (
-                                    <Star key={r} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                                {[...Array(5)].map((_, r) => (
+                                    <Star key={r} className={`w-4 h-4 ${r < item.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'}`} />
                                 ))}
                             </div>
 
@@ -143,7 +149,8 @@ function Testimonials() {
                                         {item.author}
                                         <CheckCircle className="w-3.5 h-3.5 text-blue-400" />
                                     </div>
-                                    <div className="text-xs text-blue-300">{item.role} · {item.location}</div>
+                                    <div className="text-xs text-blue-300">{item.business}</div>
+                                    <div className="text-xs text-blue-400/70">{item.role} · {item.location}</div>
                                 </div>
                             </div>
                         </div>

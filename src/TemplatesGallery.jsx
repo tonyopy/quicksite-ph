@@ -5,24 +5,24 @@ import {
   Building, Sun, Sparkles, Briefcase, Zap, Coffee, BedDouble, ChevronRight
 } from 'lucide-react';
 
-// Premium Category Configuration
+// Premium Category Configuration — industry-specific descriptions
 const categoryConfig = {
-  calibration: { icon: Scale, color: 'bg-blue-50 text-blue-600', gradient: 'from-blue-500 to-cyan-500', img: 'https://images.unsplash.com/photo-1581093458891-9f30eec4768c?auto=format&fit=crop&w=800&q=80' },
-  cleaning: { icon: Sparkles, color: 'bg-cyan-50 text-cyan-600', gradient: 'from-cyan-400 to-blue-500', img: 'https://images.unsplash.com/photo-1581578731117-104529d18305?auto=format&fit=crop&w=800&q=80' },
-  clinic: { icon: Stethoscope, color: 'bg-emerald-50 text-emerald-600', gradient: 'from-emerald-400 to-teal-500', img: 'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=800&q=80' },
-  condo: { icon: Building, color: 'bg-indigo-50 text-indigo-600', gradient: 'from-indigo-400 to-blue-500', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80' },
-  construction: { icon: Hammer, color: 'bg-orange-50 text-orange-600', gradient: 'from-orange-400 to-red-500', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80' },
-  ecommerce: { icon: ShoppingBag, color: 'bg-purple-50 text-purple-600', gradient: 'from-purple-400 to-pink-500', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=800&q=80' },
-  fitness: { icon: Dumbbell, color: 'bg-rose-50 text-rose-600', gradient: 'from-rose-400 to-red-500', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80' },
-  'law-firm': { icon: Briefcase, color: 'bg-slate-50 text-slate-600', gradient: 'from-slate-600 to-zinc-600', img: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80' },
-  photography: { icon: Camera, color: 'bg-pink-50 text-pink-600', gradient: 'from-pink-400 to-rose-500', img: 'https://images.unsplash.com/photo-1554048612-387768052bf7?auto=format&fit=crop&w=800&q=80' },
-  printing: { icon: Printer, color: 'bg-yellow-50 text-yellow-600', gradient: 'from-yellow-400 to-orange-500', img: 'https://images.unsplash.com/photo-1562564025-51dc11516a0b?auto=format&fit=crop&w=800&q=80' },
-  'real-estate': { icon: Home, color: 'bg-sky-50 text-sky-600', gradient: 'from-sky-400 to-blue-500', img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80' },
-  resort: { icon: Sun, color: 'bg-amber-50 text-amber-600', gradient: 'from-amber-400 to-orange-500', img: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80' },
-  restaurant: { icon: Utensils, color: 'bg-red-50 text-red-600', gradient: 'from-red-400 to-orange-500', img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80' },
-  solar: { icon: Zap, color: 'bg-lime-50 text-lime-600', gradient: 'from-lime-400 to-green-500', img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80' },
-  transient: { icon: BedDouble, color: 'bg-violet-50 text-violet-600', gradient: 'from-violet-400 to-purple-500', img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80' },
-  default: { icon: Layout, color: 'bg-gray-50 text-gray-600', gradient: 'from-gray-400 to-slate-500', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80' }
+  calibration: { icon: Scale, color: 'bg-blue-50 text-blue-600', gradient: 'from-blue-500 to-cyan-500', img: 'https://images.unsplash.com/photo-1581093458891-9f30eec4768c?auto=format&fit=crop&w=800&q=80', desc: 'Online quote requests, service scheduling, and certificate tracking for calibration labs.' },
+  cleaning: { icon: Sparkles, color: 'bg-cyan-50 text-cyan-600', gradient: 'from-cyan-400 to-blue-500', img: 'https://images.unsplash.com/photo-1581578731117-104529d18305?auto=format&fit=crop&w=800&q=80', desc: 'Automated booking, service area selection, and recurring schedule management.' },
+  clinic: { icon: Stethoscope, color: 'bg-emerald-50 text-emerald-600', gradient: 'from-emerald-400 to-teal-500', img: 'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=800&q=80', desc: 'Patient appointment booking, doctor profiles, services list, and auto-reminders.' },
+  condo: { icon: Building, color: 'bg-indigo-50 text-indigo-600', gradient: 'from-indigo-400 to-blue-500', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80', desc: 'Unit listings, virtual tours, inquiry forms, and availability calendars.' },
+  construction: { icon: Hammer, color: 'bg-orange-50 text-orange-600', gradient: 'from-orange-400 to-red-500', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80', desc: 'Project portfolio, quote request forms, and service area coverage maps.' },
+  ecommerce: { icon: ShoppingBag, color: 'bg-purple-50 text-purple-600', gradient: 'from-purple-400 to-pink-500', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=800&q=80', desc: 'Product catalog, cart, GCash/PayPal checkout, and order tracking.' },
+  fitness: { icon: Dumbbell, color: 'bg-rose-50 text-rose-600', gradient: 'from-rose-400 to-red-500', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80', desc: 'Class schedules, membership sign-ups, trainer profiles, and online payments.' },
+  'law-firm': { icon: Briefcase, color: 'bg-slate-50 text-slate-600', gradient: 'from-slate-600 to-zinc-600', img: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80', desc: 'Consultation booking, practice areas, attorney bios, and secure contact forms.' },
+  photography: { icon: Camera, color: 'bg-pink-50 text-pink-600', gradient: 'from-pink-400 to-rose-500', img: 'https://images.unsplash.com/photo-1554048612-387768052bf7?auto=format&fit=crop&w=800&q=80', desc: 'Portfolio gallery, package pricing, event date booking, and client proofing.' },
+  printing: { icon: Printer, color: 'bg-yellow-50 text-yellow-600', gradient: 'from-yellow-400 to-orange-500', img: 'https://images.unsplash.com/photo-1562564025-51dc11516a0b?auto=format&fit=crop&w=800&q=80', desc: 'Online order forms, file upload, price calculator, and order status tracking.' },
+  'real-estate': { icon: Home, color: 'bg-sky-50 text-sky-600', gradient: 'from-sky-400 to-blue-500', img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', desc: 'Property listings, viewing schedules, agent profiles, and lead capture.' },
+  resort: { icon: Sun, color: 'bg-amber-50 text-amber-600', gradient: 'from-amber-400 to-orange-500', img: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80', desc: 'Room booking, amenities showcase, photo gallery, and GCash reservations.' },
+  restaurant: { icon: Utensils, color: 'bg-red-50 text-red-600', gradient: 'from-red-400 to-orange-500', img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80', desc: 'Digital menu, table reservations, online ordering, and delivery integration.' },
+  solar: { icon: Zap, color: 'bg-lime-50 text-lime-600', gradient: 'from-lime-400 to-green-500', img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80', desc: 'Solar savings calculator, installation booking, and project gallery.' },
+  transient: { icon: BedDouble, color: 'bg-violet-50 text-violet-600', gradient: 'from-violet-400 to-purple-500', img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80', desc: 'Room availability, instant booking, guest reviews, and payment integration.' },
+  default: { icon: Layout, color: 'bg-gray-50 text-gray-600', gradient: 'from-gray-400 to-slate-500', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', desc: 'Professional website with booking, lead capture, and payment automation.' }
 };
 
 function TemplatesGallery({ onBack }) {
@@ -190,9 +190,9 @@ function TemplatesGallery({ onBack }) {
                       {category.replace('-', ' ')}
                     </h2>
 
-                    <div className=" space-y-3 mb-6 flex-grow">
+                    <div className="space-y-3 mb-6 flex-grow">
                       <p className="text-slate-500 text-sm leading-relaxed">
-                        Includes booking system, lead capture, and payment integration.
+                        {config.desc}
                       </p>
                     </div>
 
@@ -203,7 +203,7 @@ function TemplatesGallery({ onBack }) {
                         ))}
                       </div>
                       <span className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2">
-                        {categories[category][0].designCount || categories[category].length} Styles
+                        {categories[category][0].designCount || categories[category].length} Ready Designs
                       </span>
                     </div>
                   </div>
@@ -276,6 +276,19 @@ function TemplatesGallery({ onBack }) {
                 );
               })}
             </div>
+          </div>
+        )}
+
+        {/* Bottom CTA — catches clients who browsed but didn't convert */}
+        {!selectedTemplate && (
+          <div className="mt-16 mb-8 max-w-3xl mx-auto text-center bg-white rounded-2xl shadow-xl p-10 border border-gray-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Like what you see?</h3>
+            <p className="text-gray-500 mb-6">We'll customize any template for your brand — colors, logo, photos, and content. All designs include our automation engine.</p>
+            <a href="#contact" className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
+              Get My Custom Website
+              <ChevronRight className="w-5 h-5" />
+            </a>
+            <p className="mt-4 text-xs text-gray-400">Starting at ₱5,999 · Includes free mockup</p>
           </div>
         )}
       </div>
